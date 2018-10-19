@@ -40,7 +40,7 @@ public class ArgsInfo {
 			flgShuffle = ArgsUtils.hasKey("-shuffle");
 			flgAuto = ArgsUtils.hasKey("-auto");
 			if (flgAuto)
-				waitTime = Long.valueOf(ArgsUtils.getValue("-auto", 0));
+				waitTime = Long.valueOf(ArgsUtils.getValue("-auto", 0)) * 1000;
 			flgExam = ArgsUtils.hasKey("-exam");
 			if (flgExam)
 				cntExam = Integer.valueOf(ArgsUtils.getValue("-exam", 0));
@@ -63,7 +63,7 @@ public class ArgsInfo {
 			flgShuffle = ArgsUtils.hasKey("-shuffle");
 			flgAuto = ArgsUtils.hasKey("-auto");
 			if (flgAuto)
-				waitTime = Long.valueOf(ArgsUtils.getValue("-auto", 0));
+				waitTime = Long.valueOf(ArgsUtils.getValue("-auto", 0)) * 1000;
 			flgExam = ArgsUtils.hasKey("-exam");
 			if (flgExam)
 				cntExam = Integer.valueOf(ArgsUtils.getValue("-exam", 0));
