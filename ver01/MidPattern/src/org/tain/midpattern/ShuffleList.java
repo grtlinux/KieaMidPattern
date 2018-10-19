@@ -1,7 +1,9 @@
 package org.tain.midpattern;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileInputStream;
+import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -108,7 +110,21 @@ public class ShuffleList {
 	private List<Pattern> getListAll() throws Exception {
 		List<Pattern> listAll = new ArrayList<Pattern>();
 
-		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(this.dataFileName), "UTF-8"));
+		InputStream inputStream = null;
+		
+		if (flag) {
+			// check system or jar
+			File file = new File(this.dataFileName);
+			if (file.exists()) {
+				// system file
+				inputStream = new FileInputStream(this.dataFileName);
+			} else {
+				// jar file
+				inputStream = this.getClass().getResourceAsStream(this.dataFileName);
+			}
+		}
+		
+		BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
 		String line;
 		Pattern pattern;
 
