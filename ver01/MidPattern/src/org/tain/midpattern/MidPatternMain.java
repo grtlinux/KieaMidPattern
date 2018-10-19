@@ -27,13 +27,13 @@ public class MidPatternMain {
 		
 		if (!flag) {
 			args = new String[] {
-					"ARG-1",
-					"ARG-2",
-					"ARG-3",
+					"-range", "123", "155",
 			};
 		}
 		
 		if (flag) new ResourcesUtils();
+		if (flag) ArgsInfo.setArgs(args);
+		if (flag) ArgsInfo.printInfo();
 		
 		if (flag) test01(args);
 	}

@@ -131,11 +131,10 @@ public final class RunJarLoader {
 	public static void main(String[] args) throws Exception {
 		if (!flag) System.out.println(">>>>> " + ClassUtils.getClassInfo());
 
-		if (flag) {
+		if (!flag) {
 			args = new String[] {
-					"ARG-1",
-					"ARG-2",
-					"ARG-3",
+					"-range", "123", "155",
+					"-shuffle",
 			};
 		}
 		

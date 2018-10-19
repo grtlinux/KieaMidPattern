@@ -52,23 +52,51 @@ public class ArgsInfo {
 	
 	///////////////////////////////////////////////////////////////////////////
 	
+	public static void setArgs(String[] args) {
+		try {
+			ArgsUtils.setParams(args);
+			
+			baseDir = ArgsUtils.getValue("-basedir", DEFAULT_BASEDIR);
+			dataFile = ArgsUtils.getValue("-datafile", DEFAULT_DATAFILE);
+			begRange = Integer.valueOf(ArgsUtils.getValue("-range", 0)) - 1;
+			endRange = Integer.valueOf(ArgsUtils.getValue("-range", 1));
+			flgShuffle = ArgsUtils.hasKey("-shuffle");
+			flgAuto = ArgsUtils.hasKey("-auto");
+			if (flgAuto)
+				waitTime = Long.valueOf(ArgsUtils.getValue("-auto", 0));
+			flgExam = ArgsUtils.hasKey("-exam");
+			if (flgExam)
+				cntExam = Integer.valueOf(ArgsUtils.getValue("-exam", 0));
+		} catch (Exception e) {
+			e.printStackTrace();
+			System.exit(-1);
+		}
+	}
+	
 	public static void printInfo() {
 		if (flag) {
-			System.out.println(">>>>> baseDir    = " + ArgsInfo.baseDir);
-			System.out.println(">>>>> dataFile   = " + ArgsInfo.dataFile);
-			System.out.println(">>>>> begRange   = " + ArgsInfo.begRange);
-			System.out.println(">>>>> endRange   = " + ArgsInfo.endRange);
-			System.out.println(">>>>> flgShuffle = " + ArgsInfo.flgShuffle);
-			System.out.println(">>>>> flgAuto    = " + ArgsInfo.flgAuto);
-			System.out.println(">>>>> waitTime   = " + ArgsInfo.waitTime);
-			System.out.println(">>>>> flgExam    = " + ArgsInfo.flgExam);
-			System.out.println(">>>>> cntExam    = " + ArgsInfo.cntExam);
+			System.out.println(">>>>> ArgsInfo.baseDir    = " + ArgsInfo.baseDir);
+			System.out.println(">>>>> ArgsInfo.dataFile   = " + ArgsInfo.dataFile);
+			System.out.println(">>>>> ArgsInfo.begRange   = " + ArgsInfo.begRange);
+			System.out.println(">>>>> ArgsInfo.endRange   = " + ArgsInfo.endRange);
+			System.out.println(">>>>> ArgsInfo.flgShuffle = " + ArgsInfo.flgShuffle);
+			System.out.println(">>>>> ArgsInfo.flgAuto    = " + ArgsInfo.flgAuto);
+			System.out.println(">>>>> ArgsInfo.waitTime   = " + ArgsInfo.waitTime);
+			System.out.println(">>>>> ArgsInfo.flgExam    = " + ArgsInfo.flgExam);
+			System.out.println(">>>>> ArgsInfo.cntExam    = " + ArgsInfo.cntExam);
 		}
 	}
 	
 	///////////////////////////////////////////////////////////////////////////
 	
 	public static void main(String[] args) throws Exception {
+		
+		if (flag) {
+			args = new String[] {
+					"-range", "123", "155",
+			};
+		}
+		ArgsInfo.setArgs(args);
 		
 		ArgsInfo.printInfo();
 	}
