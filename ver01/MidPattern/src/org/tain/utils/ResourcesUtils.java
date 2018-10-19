@@ -17,6 +17,8 @@ public class ResourcesUtils {
 		if (flag) printAll();
 	}
 
+	public ResourcesUtils() {}
+	
 	///////////////////////////////////////////////////////////////////////////
 
 	public static String getString(String key) {

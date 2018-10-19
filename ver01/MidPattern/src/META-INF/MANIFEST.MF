@@ -1,36 +1,23 @@
 Manifest-Version: 1.0
 Main-Class: org.tain.runjar.RunJarLoader
 Class-Path: ./
-Title: Kiea Thomson
+Title: Kiea MidPattern
 Version: ver 1.0
 Build-Jdk: 1.8.0_152
 Package: org.tain.runjar
-Created-Date: 2018.09.30
+Created-Date: 2018.10.19
 Created-By: TAIN, Inc.
 Company: TAIN, Inc.
 Author: Kiea Seok Kang
 Comment: it's for you.
   .
-Rsrc-Main-Class: org.tain.kiea.thomson.KieaThomsonMain
+Rsrc-Main-Class: org.tain.midpattern.MidPatternMain
 Rsrc-Class-Path: ./
-  lib/xpp3-1.1.4c.jar
-  lib/commons-logging-1.2.jar
-  lib/upaValueAdd-3.2.1.0.jar
-  lib/commons-configuration-1.10.jar
   lib/json-20180813.jar
-  lib/jfxrt.jar
-  lib/upa-3.2.1.0.jar
-  lib/ema-3.2.1.0-javadoc.jar
-  lib/ema-3.2.1.0.jar
-  lib/commons-collections-3.2.2.jar
-  lib/upaValueAddCache-3.2.1.0.jar
-  lib/ansipage-3.2.1.0.jar
-  lib/slf4j-jdk14-1.7.12.jar
-  lib/gson-2.7.jar
-  lib/jdacsUpalib.jar
-  lib/commons-lang-2.6.jar
   lib/slf4j-api-1.7.12.jar
-  lib/mysql-connector-java-5.1.11-bin.jar
+  lib/slf4j-jdk14-1.7.12.jar
+  lib/log4j-1.2.17.jar
+  lib/gson-2.7.jar
   
 
 
