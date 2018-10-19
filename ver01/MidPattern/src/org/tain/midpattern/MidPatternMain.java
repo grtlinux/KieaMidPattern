@@ -40,7 +40,8 @@ public class MidPatternMain {
 	
 	private static void test01(String[] args) throws Exception {
 		if (flag) log.info("INFO: >>>>> {}", ClassUtils.getFileLine());
-		
 		if (flag) log.info("INFO: >>>>> {}, args = {}", ClassUtils.getFileLine(), Arrays.asList(args));
+		
+		if (flag) new ShuffleList().process();
 	}
 }

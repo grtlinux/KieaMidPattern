@@ -65,5 +65,30 @@ public final class JacksonUtils {
 			String content = jsonObject.has("content") ? jsonObject.getString("content") : null;
 			if (flag) System.out.printf(">>>>> [%s] [%s] [%s] [%s] [%s]%n", id, name, age, addr, content);
 		}
+		
+		if (flag) {
+			JSONObject jsonObject = new JSONObject();
+			
+			jsonObject.put("id", 123);
+			jsonObject.put("name", "Kiea");
+			jsonObject.put("age", 30);
+			jsonObject.put("addr", "Seoul");
+			
+			if (flag) System.out.println(">>>>> " + jsonObject.toString(2));
+		}
+		
+		if (flag) {
+			JSONObject jsonObject = new JSONObject();
+			
+			JSONArray jsonArray = new JSONArray();
+			jsonArray.put("arr-1");
+			jsonArray.put("arr-2");
+			jsonArray.put("arr-3");
+			jsonArray.put("arr-4");
+			
+			jsonObject.put("arr", jsonArray);
+			
+			if (flag) System.out.println(">>>>> " + jsonObject.toString(2));
+		}
 	}
 }
