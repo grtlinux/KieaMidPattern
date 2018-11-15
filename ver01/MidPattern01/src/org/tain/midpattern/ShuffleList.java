@@ -120,7 +120,8 @@ public class ShuffleList {
 				inputStream = new FileInputStream(this.dataFileName);
 			} else {
 				// jar file
-				inputStream = this.getClass().getResourceAsStream(this.dataFileName);
+				//inputStream = this.getClass().getResourceAsStream(this.dataFileName);
+				inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream(this.dataFileName);
 			}
 		}
 		
@@ -152,12 +153,40 @@ public class ShuffleList {
 	public static void main(String[] args) throws Exception {
 		if (flag) log.info("INFO: >>>>> {}", ClassUtils.getFileLine());
 		
-		if (flag) test01(args);
+		if (flag) run01(args);
+		if (!flag) test02(args);
 	}
 	
-	private static void test01(String[] args) throws Exception {
+	private static void run01(String[] args) throws Exception {
 		if (flag) log.info("INFO: >>>>> {}", ClassUtils.getFileLine());
 		
 		if (flag) new ShuffleList().process();
+	}
+	
+	private static void test02(String[] args) throws Exception {
+		if (flag) log.info("INFO: >>>>> {}", ClassUtils.getFileLine());
+		
+		if (flag) {
+			InputStream inputStream = Thread.currentThread().getContextClassLoader().getResourceAsStream("data/03.MidPattern.txt");
+			
+			BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "UTF-8"));
+			String line;
+			Pattern pattern;
+
+			while ((line = bufferedReader.readLine()) != null) {
+				if (flag) System.out.println(">>>>> line: " + line);
+
+				try {
+					pattern = new Pattern(line);
+				} catch (Exception e) {
+					continue;
+				}
+
+				if (flag) System.out.println(">>>>> pattern: " + pattern);
+			}
+			
+			bufferedReader.close();
+			inputStream.close();
+		}
 	}
 }

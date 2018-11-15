@@ -88,6 +88,15 @@ public class UsageMain {
 			System.out.println("USAGE: java -jar RunJar.jar test02 args...");
 			System.out.println();
 		}
+		
+		if (flag) {
+			// USAGE: main01
+			System.out.println("---------- arg0: main01 -----------");
+			System.out.println("COMMENT: main01 project");
+			System.out.println("USAGE: java -jar RunJar.jar main01");
+			System.out.println("\t\t>>>>>org.tain.midpattern.MidPatternMain");
+			System.out.println();
+		}
 	}
 	
 	///////////////////////////////////////////////////////////////////////////
