@@ -29,9 +29,10 @@
 hs_err_pid*
 
 # -------------------------------
-/bin
-/log
 .DS_store
+bin/
+build/
+logs/
 
 
 
