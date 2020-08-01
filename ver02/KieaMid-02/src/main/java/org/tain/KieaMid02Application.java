@@ -127,6 +127,26 @@ public class KieaMid02Application implements CommandLineRunner {
 
 	private void job02() {
 		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			// text -> table
+			BufferedReader br = null;
+			try {
+				br = new BufferedReader(new FileReader("src/main/resources/json/org_1000.txt"));
+				String line = null;
+				while ((line = br.readLine()) != null) {
+					if (Flag.flag) System.out.println(">>>>> " + line);
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			} finally {
+				if (br != null) try { br.close(); } catch (Exception e) {}
+			}
+		}
+		
+		if (Flag.flag) {
+			// table -> jsonFile
+		}
 	}
 
 	private void job03() {
