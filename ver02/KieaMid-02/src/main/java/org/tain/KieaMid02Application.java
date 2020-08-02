@@ -63,7 +63,8 @@ public class KieaMid02Application implements CommandLineRunner {
 	private void job02() {
 		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
 		
-		if (!Flag.flag) this.chun.loading();
+		if (Flag.flag) this.chun.loading();
+		if (Flag.flag) this.chun.getPage();
 	}
 
 	///////////////////////////////////////////////////////////////////////////
@@ -76,7 +77,7 @@ public class KieaMid02Application implements CommandLineRunner {
 	private void job03() {
 		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
 		
-		if (Flag.flag) this.wordMean.loading();
+		if (!Flag.flag) this.wordMean.loading();
 	}
 
 	///////////////////////////////////////////////////////////////////////////

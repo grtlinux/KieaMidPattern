@@ -2,6 +2,7 @@ package org.tain.working;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
+import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -91,6 +92,17 @@ public class Chun {
 			} finally {
 				if (br != null) try { br.close(); } catch (Exception e) {}
 			}
+		}
+	}
+	
+	public void getPage() {
+		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			// getPage
+			this.sentenceRepository.getAll().forEach(entity -> {
+				System.out.println(">>>>> " + Arrays.asList(entity));
+			});
 		}
 	}
 	
