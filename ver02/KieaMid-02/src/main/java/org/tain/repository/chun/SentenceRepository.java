@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.tain.domain.chun.Sentence;
+import org.tain.info.chun.GrpSentenceInfo;
 
 @RepositoryRestResource
 public interface SentenceRepository extends JpaRepository<Sentence, Integer>{
@@ -32,7 +33,7 @@ public interface SentenceRepository extends JpaRepository<Sentence, Integer>{
 			+ "  Sentence s left outer join s.grp g "
 			+ "where 1=1 "
 			+ "order by s.no desc ")
-	public List<Object[]> getAll();
+	public List<GrpSentenceInfo> getAll();
 	
 	@Query("select "
 			//+ "  new org.tain.object.chun.GrpSentence("  // need @AllArgsConstructor

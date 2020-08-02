@@ -2,13 +2,13 @@ package org.tain.working;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Arrays;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tain.domain.chun.Grp;
 import org.tain.domain.chun.Sentence;
 import org.tain.domain.chun.Tip;
+import org.tain.object.chun.GrpSentence;
 import org.tain.repository.chun.GrpRepository;
 import org.tain.repository.chun.SentenceRepository;
 import org.tain.repository.chun.TipRepository;
@@ -101,7 +101,15 @@ public class Chun {
 		if (Flag.flag) {
 			// getPage
 			this.sentenceRepository.getAll().forEach(entity -> {
-				System.out.println(">>>>> " + Arrays.asList(entity));
+				//System.out.println(">>>>> " + Arrays.asList(entity));
+				GrpSentence grpSentence = GrpSentence.builder()
+						.grpNo(entity.getGrpNo())
+						.grpName(entity.getGrpName())
+						.sentNo(entity.getSentNo())
+						.sentEn(entity.getSentEn())
+						.sentKr(entity.getSentKr())
+						.build();
+				System.out.println(">>>>> json: " + grpSentence.toPrettyJson());
 			});
 		}
 	}

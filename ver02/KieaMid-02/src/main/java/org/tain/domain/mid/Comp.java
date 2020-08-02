@@ -1,9 +1,8 @@
 package org.tain.domain.mid;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 
 import org.tain.utils.CurrentInfo;
 
@@ -23,7 +22,6 @@ import lombok.extern.slf4j.Slf4j;
 public class Comp {
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
 	private String code;
@@ -34,17 +32,24 @@ public class Comp {
 	
 	private String stmtEn;
 	
+	@ManyToOne
+	private Division division;
+	
 	@Builder
 	public Comp(
+			Long id,
 			String code,
 			int idx,
 			String stmtKr,
-			String stmtEn
+			String stmtEn,
+			Division division
 			) {
+		this.id = id;
 		this.code = code;
 		this.idx = idx;
 		this.stmtKr = stmtKr;
 		this.stmtEn = stmtEn;
+		this.division = division;
 	}
 	
 	////////////////////////////////////////////////////////////////////////
