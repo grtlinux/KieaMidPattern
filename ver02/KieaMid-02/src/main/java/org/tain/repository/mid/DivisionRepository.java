@@ -1,10 +1,10 @@
-package org.tain.repository;
+package org.tain.repository.mid;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
-import org.tain.domain.Comp;
+import org.tain.domain.mid.Division;
 
 @RepositoryRestResource
-public interface CompRepository extends JpaRepository<Comp, Long>{
+public interface DivisionRepository extends JpaRepository<Division, String>{
 
 }

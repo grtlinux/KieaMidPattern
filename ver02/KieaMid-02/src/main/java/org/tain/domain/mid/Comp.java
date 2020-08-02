@@ -1,4 +1,4 @@
-package org.tain.domain;
+package org.tain.domain.mid;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -7,7 +7,9 @@ import javax.persistence.Id;
 
 import org.tain.utils.CurrentInfo;
 
+import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import lombok.Builder;
 import lombok.Data;
@@ -49,7 +51,10 @@ public class Comp {
 	
 	public String toJson() {
 		try {
-			return new ObjectMapper().writeValueAsString(this);
+			ObjectMapper objectMapper = new ObjectMapper();
+			objectMapper.registerModule(new JavaTimeModule());
+			objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+			return objectMapper.writeValueAsString(this);
 		} catch (Exception e) {
 			log.info("ERROR[{}]: {}", CurrentInfo.get(), e.getMessage());
 		}
@@ -58,7 +63,10 @@ public class Comp {
 	
 	public String toPrettyJson() {
 		try {
-			return new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
+			ObjectMapper objectMapper = new ObjectMapper();
+			objectMapper.registerModule(new JavaTimeModule());
+			objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
 		} catch (Exception e) {
 			log.info("ERROR[{}]: {}", CurrentInfo.get(), e.getMessage());
 		}

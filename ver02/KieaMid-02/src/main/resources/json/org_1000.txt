@@ -184,7 +184,7 @@
 88. As it suddenly became cold, I put on my overcoat.
 	갑자기 쌀쌀해져서 외투를 입었다.
 89. May 5. Sun. Fine. Children's Day. Up at 5. Did English and Math in the morning. Had doughnuts. Saw movies in the afternoon. Bed at 10.
-	5월 5일 일요일. 맑음. 어린이날. 5시에 일어남. 오전중은 영어/수학 공부. 도우넛을 먹음. 오후 영화관람. 10시에 잠.
+	-5월 5일 일요일. 맑음. 어린이날. 5시에 일어남. 오전중은 영어/수학 공부. 도우넛을 먹음. 오후 영화관람. 10시에 잠.
 90. I hope I will pass the entrance examination this time.
 	이번에는 입학 시험에 합격하리라 생각한다.
 91. I shall not be able to finish (reading) this novel by tomorrow evening.
@@ -447,7 +447,7 @@
 218. It will have been raining a whole week by tomorrow.
 	내일로 꼭 일주일 동안 내리 비가 쏟아진 셈이 된다.
 219. I shall have been taking piano lessons for full three years by March.
-	3월로 피아노를 꼭 3년 배우고 있는 셈이 된다.
+	-3월로 피아노를 꼭 3년 배우고 있는 셈이 된다.
 220. You had better take a short rest, I think. By five o'clock you will have been reading for three hours on end.
 	좀 쉬는 것이 좋을 것입니다. 다섯 시가 되면 세 시간 내리 책을 읽은 셈이 됩니다.
 
@@ -1678,7 +1678,7 @@
 814. This is the book which pleased him very much.
 	이것이 그를 대단히 그쁘게 한 책입니다.
 815. His family which consists of eleven people is a merry one.
-	11명으로 이루어진 그의 가정은 떠들석하지요.
+	-11명으로 이루어진 그의 가정은 떠들석하지요.
 816. That which Don Quixote took for a giant was really a big windmill.
 	돈키호테가 거인으로 생각한 것은 실은 커다란 풍차였다.
 817. Have you found the knife which you lost yesterday?
@@ -1760,7 +1760,7 @@
 855. There were fewer applicants than might have been expected.
 	생각했던 것보다 지원자가 적었다.
 856. The 6th of August was the day when the atomic bomb was dropped upon Hiroshima in Japan.
-	8월 6일은 원자 폭탄이 일본 히로시마에 투하되었던 날이다.
+	-8월 6일은 원자 폭탄이 일본 히로시마에 투하되었던 날이다.
 857. As my son is dead, there are times when I feel lonely.
 	아들 녀석이 죽어서 쓸쓸할 때가 있습니다.
 858. It is impossible for us to imagine a time when electricity was unknown.
