@@ -29,7 +29,7 @@
 hs_err_pid*
 
 # -------------------------------
-.DS_store
+.DS_Store
 bin/
 build/
 logs/
