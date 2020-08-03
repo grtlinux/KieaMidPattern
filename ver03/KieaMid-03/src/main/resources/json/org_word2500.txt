@@ -1,8 +1,164 @@
-capable		할 수 있는, 유능한
-convenient	편리한
-succeed		성공하다, 계승하다, 계속되다
-figure		모습, 인물, 숫자, 계산하다
-forgive		용서하다
-blame		나무라다, 비난하다
-subject		주제, 학과, 지배를 받는
-effect		결과, 효과
+capable        할 수 있는, 유능한
+convenient     편리한
+succeed        성공하다, 계승하다, 계속되다
+figure         모습, 인물, 숫자, 계산하다
+forgive        용서하다
+blame          나무라다, 비난하다
+subject        주제, 학과, 지배를 받는
+effect         결과, 효과
+introduce      소개하다
+afford         ..할 여유가 있다
+inform         ..에게 알리다, 통지하다
+decide         결정하다, 결심하다.
+sense          감각, 분별, 의미
+haste          급함, 성급
+matter         물질, 문제, 중요하다
+except         ..을 제외하고
+owe            빚지다. 지불할 의무가 있다.
+essential      근본적인, 필수
+prefer         ..을 좋아하다
+suggest        제안하다
+discuss        토론하다
+angry          성난, 노한
+due            당연한, 정당한
+side           측면, 방면, 편들다
+agree          동의하다
+account        설명, 계정, 설명하다
+distinct       독특한, 별개의
+measure        측정하다. 치수. 수단
+congratulate   축하하다
+common         공통의, 일반의, 흔히 있는
+accident       사고, 우연
+enable         가능하게 하다
+warn           경고하다
+distant        거리가 먼, (시간적으로) 먼
+admit          인정하다
+express        표현하다
+attention      주의
+major          큰, 주요한, 다수의, 전공하다
+worry          걱정하다, 고민하다
+fix            고정시키다, 수리하다
+respect        존경(하다)
+expect         기대하다
+mind           마음, 주의하다, 꺼리다
+likely         있음직한
+familiar       친한
+face           ..에 직면하다. 얼굴
+hear           듣다
+equal          같은, 균등한
+famous         유명한
+apply          적용하다.
+accuse         꾸짖다. 고발하다
+frequent       빈번한, 자주 방문하다
+sufficient     충분한
+incline        기울다. 마음이 기울다.
+apt            ..하기 쉬운
+consist        이루어지다. 일치하다.
+correspond     통신하다. 일치하다.
+public         공공의
+deny           부정하다.
+intend         의도하다.
+compare        ..와 비교하다.
+allow          허락하다.
+support        지지하다. 지탱하다.
+abandon        버리다. 단념하다.
+continue       계속하다.
+reflect        반사하다. 반영하다. 숙고하다.
+refuse         거절하다.
+suppose        추측하다.
+boring         따분한
+object         반대하다. 대상
+suffer         (고통을) 받다
+favorite       좋아하는
+distinguish    A와 B를 구별하다.
+solve          해결하다.
+parallel       평행의, 유사한.
+delay          미루다. 연기하다.
+command        명령하다. 명령
+curious        호기심 있는. 기묘한
+affect         영향을 주다
+delight        기쁨, 기쁘게 하다
+superior       보다 높은, 우수한
+search         탐색, 조사
+rude           무례한
+ignorant       무지한
+independent    독립한
+manage         경영하다. 관리하다.
+abstract       추출하다. 추상적인
+contradict     모순되다. 부정하다.
+classify       분류하다.
+escape         도망가다. 탈출
+graduate       졸업하다. 졸업생
+shameful       부끄러운
+remind         생각나게 하다
+accept         받아들이다. 수락하다
+prohibit       금지하다.
+insist         주장하다
+hesitate       망설이다
+calculate      계산하다
+beware         조심하다
+propose        제안하다. 신청하다.
+proper         적당한, 고유의
+appoint        임명하다. (시간/장소 등을) 정하다
+supply         공급하다. 공급
+combine        결합하다. 결부시키다.
+apologize      사과하다.
+available      이용할 수 있는
+qualify        ..에게 자격을 주다.
+identify       동일시하다
+claim          요구하다. 주장하다. 요구.청구
+aim            목표. 겨누다.
+protect        보호하다.
+attain         달성하다.
+acquire        획득하다. 습득하다.
+comfortable    편안한, 기분 좋은
+impress        인상을 주다. 감동시키다.
+prime          제일의, 주요한
+evidently      명백하게
+confidence     신뢰, 자신
+amount         총계, 양
+focus          초점, 집중시키다.
+efficient      능률적인, 효과적인
+bore           실증나게 하다.
+consider       숙고하다. ..로 여기다.
+adapt          적응시키다.
+benefit        이익, 은혜
+deliver        배달하다.
+forbid         금하다.
+reduce         축소하다. 줄이다.
+inquire        문의하다. 묻다.
+sight          풍경. 시
+derive         끌어내다. 유래를 찾다.
+occupy         점거하다. (시간/장소를) 차지하다.
+provide        공급하다.
+bent           소질, 경향, 구부러진, 결심한
+possess        소유하다.
+contrary       반대의, 반대, 모순
+means          수단, 재산
+risk           위험, (목숨을) 걸다.
+conscious      지각하고 있는, 의식하고 있는
+charge         고발하다. 요금, 책임
+degree         정도
+favor          호의, ..에게 호의를 보이다.
+obey           ..에 따르다.
+respond        ..에 대답하다. 반응하다.
+steal          훔치다. 몰래 빼았다.
+submit         제출하다. 복종시키다.
+persist        고집하다. 계속하다.
+piece          한 조각
+exchange       교환하다. 교환
+responsible    책임이 있는
+lack           부족, 모자라다. 부족하다.
+anxious        걱정하는
+avail          쓸모가 있다. 이익. 효용
+practically    실제적으로, 사실상
+ashamed        부끄러운
+accompany      ..에 동반하다.
+indifferent    무관심한, 냉담한
+collect        모으다.
+addition       추가
+taste          미각, 맛, 시식하다. 맛보다
+behalf         이익, 측
+consent        동의하다, 승인하다.
+similar        비슷한
+accord         일치하다. 조회하다. 일치. 조화

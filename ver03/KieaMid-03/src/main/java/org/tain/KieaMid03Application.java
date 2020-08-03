@@ -30,10 +30,10 @@ public class KieaMid03Application implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		log.info("KANG-20200803 >>>>> {} {}", CurrentInfo.get());
 		
-		if (Flag.flag) job01();
-		if (Flag.flag) job02();
-		if (Flag.flag) job03();
-		if (Flag.flag) job04();
+		if (!Flag.flag) job01();  // board
+		if (!Flag.flag) job02();  // mid
+		if (!Flag.flag) job03();  // chun
+		if (Flag.flag) job04();  // word
 		if (Flag.flag) job05();
 	}
 
@@ -94,8 +94,8 @@ public class KieaMid03Application implements CommandLineRunner {
 		log.info("KANG-20200803 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.wordWorking.loading();
-		if (Flag.flag) this.wordWorking.getAll();
-		if (Flag.flag) this.wordWorking.getPage();
+		if (!Flag.flag) this.wordWorking.getAll();
+		if (!Flag.flag) this.wordWorking.getPage();
 		if (!Flag.flag) this.wordWorking.selecting();
 	}
 

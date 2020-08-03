@@ -2,8 +2,6 @@ package org.tain.working;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.util.Arrays;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.PageRequest;
@@ -44,14 +42,14 @@ public class WordWorking {
 					
 					if (!Flag.flag) System.out.println(">>>>> " + line);
 					
-					String[] items = line.split("\t+");
-					List<String> lstItem = Arrays.asList(items);
-					if (!Flag.flag) System.out.println(">>>>> " + lstItem);
+					int pos = line.indexOf(' ');
+					String strWord = line.substring(0, pos);
+					String strMean = line.substring(pos).trim();
 					
 					word = this.wordRepository.save(Word.builder()
 							.idx(idx)
-							.word(lstItem.get(0))
-							.mean(lstItem.get(1))
+							.word(strWord)
+							.mean(strMean)
 							.build());
 					if (Flag.flag) System.out.println(">>>>> " + word.toPrettyJson());
 					
