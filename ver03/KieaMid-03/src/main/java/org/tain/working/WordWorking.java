@@ -38,7 +38,8 @@ public class WordWorking {
 				while ((line = br.readLine()) != null) {
 					line = line.trim();
 					if ("".equals(line))
-						continue;
+						//continue;
+						break;
 					
 					if (!Flag.flag) System.out.println(">>>>> " + line);
 					
