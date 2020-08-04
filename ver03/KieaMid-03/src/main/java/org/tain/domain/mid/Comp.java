@@ -13,7 +13,6 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.tain.utils.CurrentInfo;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
@@ -24,12 +23,10 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
 
 @Entity
 @Data
 @NoArgsConstructor
-@Slf4j
 public class Comp {
 
 	@Id
@@ -80,29 +77,30 @@ public class Comp {
 		this.division = division;
 	}
 	
-	////////////////////////////////////////////////////////////////////////
+	/////////////////////////////////////////////////////////////
 	
 	public String toJson() {
 		try {
-			ObjectMapper objectMapper = new ObjectMapper();
-			objectMapper.registerModule(new JavaTimeModule());
-			objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			return objectMapper.writeValueAsString(this);
+			return this.getObjectMapper().writeValueAsString(this);
 		} catch (Exception e) {
-			log.info("ERROR[{}]: {}", CurrentInfo.get(), e.getMessage());
+			e.printStackTrace();
 		}
 		return "{}";
 	}
 	
 	public String toPrettyJson() {
 		try {
-			ObjectMapper objectMapper = new ObjectMapper();
-			objectMapper.registerModule(new JavaTimeModule());
-			objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
+			return this.getObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
 		} catch (Exception e) {
-			log.info("ERROR[{}]: {}", CurrentInfo.get(), e.getMessage());
+			e.printStackTrace();
 		}
 		return "{}";
+	}
+	
+	private ObjectMapper getObjectMapper() throws Exception {
+		ObjectMapper objectMapper = new ObjectMapper();
+		objectMapper.registerModule(new JavaTimeModule());
+		objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
+		return objectMapper;
 	}
 }
