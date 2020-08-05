@@ -25,6 +25,8 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty.Access;
 
 import lombok.Builder;
 import lombok.Data;
@@ -72,16 +74,19 @@ public class Board {
 	@CreationTimestamp
 	private LocalDateTime createdDate;
 	
-	@JsonIgnore
-	@Column(name = "update_date")
+	//@JsonIgnore  // ignore when select
+	@JsonProperty(access = Access.WRITE_ONLY)  // ignore when all, only write
 	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	@Column(name = "update_date")
 	@UpdateTimestamp
 	private Timestamp updatedDate;
 	
 	@JsonIgnore
-	@Column(name = "job_date")
 	@Temporal(TemporalType.TIMESTAMP)
 	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	@Column(name = "job_date")
 	@UpdateTimestamp
 	private Date jobDate;
 	
