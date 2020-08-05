@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.SerializationFeature;
 
 @Configuration
 @EnableWebMvc
-public class WebMvcConfig implements WebMvcConfigurer {
+public class WebJsonConfig implements WebMvcConfigurer {
 
 	@Value("${json.browser-print.enabled:true}")
 	private boolean jsonBrowserPrintEnabled;
