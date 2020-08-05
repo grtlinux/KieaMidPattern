@@ -19,14 +19,12 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.tain.utils.JsonPrint;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
-import com.fasterxml.jackson.databind.DeserializationFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import lombok.Builder;
 import lombok.Data;
@@ -103,27 +101,10 @@ public class Board {
 	/////////////////////////////////////////////////////////////
 	
 	public String toJson() {
-		try {
-			return this.getObjectMapper().writeValueAsString(this);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return "{}";
+		return new JsonPrint().toJson(this);
 	}
 	
 	public String toPrettyJson() {
-		try {
-			return this.getObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-		return "{}";
-	}
-	
-	private ObjectMapper getObjectMapper() throws Exception {
-		ObjectMapper objectMapper = new ObjectMapper();
-		objectMapper.registerModule(new JavaTimeModule());
-		objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-		return objectMapper;
+		return new JsonPrint().toPrettyJson(this);
 	}
 }
