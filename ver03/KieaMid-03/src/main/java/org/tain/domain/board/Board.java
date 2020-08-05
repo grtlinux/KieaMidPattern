@@ -19,7 +19,6 @@ import javax.persistence.TemporalType;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 import org.springframework.format.annotation.DateTimeFormat;
-import org.tain.utils.JsonPrint;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonFormat.Shape;
@@ -76,8 +75,8 @@ public class Board {
 	
 	//@JsonIgnore  // ignore when select
 	@JsonProperty(access = Access.WRITE_ONLY)  // ignore when all, only write
-	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
-	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
+	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")  // jackson
+	@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")                                               // spring framework
 	@Column(name = "update_date")
 	@UpdateTimestamp
 	private Timestamp updatedDate;
@@ -101,15 +100,5 @@ public class Board {
 		this.subTitle = subTitle;
 		this.content = content;
 		this.userId = userId;
-	}
-	
-	/////////////////////////////////////////////////////////////
-	
-	public String toJson() {
-		return new JsonPrint().toJson(this);
-	}
-	
-	public String toPrettyJson() {
-		return new JsonPrint().toPrettyJson(this);
 	}
 }

@@ -8,6 +8,7 @@ import org.tain.domain.board.Board;
 import org.tain.repository.board.BoardRepository;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
+import org.tain.utils.JsonPrint;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -38,7 +39,7 @@ public class BoardWorking {
 		
 		if (Flag.flag) {
 			this.boardRepository.findAll().forEach(entity -> {
-				log.info(">>>>> json: {}", entity.toPrettyJson());
+				log.info(">>>>> json: {}", JsonPrint.getInstance().toPrettyJson(entity));
 			});
 		}
 	}
