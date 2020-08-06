@@ -34,7 +34,7 @@ bin/
 build/
 logs/
 
-# Board.json
+Board.json
 
 
 
