@@ -47,7 +47,7 @@ spring:
     livereload.enabled: true
 
 # spring.jpa.properties.hibernate.jdbc.time_zone: UTC+9     # can do the feel
-spring.jpa.properties.hibernate.jdbc.time_zone: GMT+9        # unabled to apply
+# spring.jpa.properties.hibernate.jdbc.time_zone: GMT+9        # unabled to apply
 # spring.jpa.properties.hibernate.jdbc.time_zone: Asia/Seoul     # unabled to apply
 
 logging:
@@ -76,6 +76,13 @@ project:
   name: zero
   author: Kiea Seok Kang
   
+file:
+  origin-json:
+    chun:  src/main/resources/json/org_1000.txt
+    mid:   src/main/resources/json/org_mid.txt
+    word:  src/main/resources/json/org_word2500.txt
+
+
 # --------------------------------------------------------
 ---
 spring.profiles: zero-local
