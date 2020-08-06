@@ -66,6 +66,7 @@ public class Board {
 	private String userId;
 	
 	//@JsonIgnore
+	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
 	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
 	//@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	@Column(name = "create_date")
@@ -73,18 +74,21 @@ public class Board {
 	private LocalDateTime createdDate;
 	
 	@JsonIgnore
-	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
+	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
+	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
 	@Column(name = "update_date")
 	@UpdateTimestamp
 	private Timestamp updatedDate;
 	
 	//@JsonIgnore
-	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
+	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
+	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
 	@Column(name = "job_date")
 	@UpdateTimestamp
 	private Date jobDate;
 	
 	@JsonIgnore
+	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
 	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
 	@Column(name = "work_date")
 	@UpdateTimestamp

@@ -3,6 +3,9 @@ package org.tain;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.TimeZone;
+
+import javax.annotation.PostConstruct;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -26,6 +29,15 @@ public class KieaMid04Application implements CommandLineRunner {
 		SpringApplication.run(KieaMid04Application.class, args);
 	}
 
+	@PostConstruct
+	public void start() {
+		if (!Flag.flag) {
+			TimeZone.setDefault(TimeZone.getTimeZone("UTC+9"));
+			//TimeZone.setDefault(TimeZone.getTimeZone("Asia/Seoul"));
+			//TimeZone.setDefault(TimeZone.getTimeZone("GMT+09:00"));
+		}
+	}
+	
 	@Override
 	public void run(String... args) throws Exception {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
@@ -68,10 +80,10 @@ public class KieaMid04Application implements CommandLineRunner {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.boardWorking.loading();
-		if (Flag.flag) this.boardWorking.fetching();
-		if (Flag.flag) this.boardWorking.testBoardInfoSome();
-		if (Flag.flag) this.boardWorking.saveJsonFile();
-		if (Flag.flag) this.boardWorking.loadJsonFile();
+		if (!Flag.flag) this.boardWorking.fetching();
+		if (!Flag.flag) this.boardWorking.testBoardInfoSome();
+		if (!Flag.flag) this.boardWorking.saveJsonFile();
+		if (!Flag.flag) this.boardWorking.loadJsonFile();
 	}
 
 	///////////////////////////////////////////////////////////////////////////
