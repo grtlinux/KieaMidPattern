@@ -92,14 +92,18 @@ public class Board {
 	
 	@Builder
 	public Board(
+			Long id,
 			String title,
 			String subTitle,
 			String content,
-			String userId
+			String userId,
+			LocalDateTime createdDate
 			) {
+		this.id = id;
 		this.title = title;
 		this.subTitle = subTitle;
 		this.content = content;
 		this.userId = userId;
+		this.createdDate = createdDate;
 	}
 }

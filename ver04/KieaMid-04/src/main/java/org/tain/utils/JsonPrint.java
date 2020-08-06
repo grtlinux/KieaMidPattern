@@ -1,5 +1,7 @@
 package org.tain.utils;
 
+import java.io.File;
+
 import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
@@ -20,7 +22,7 @@ public class JsonPrint implements JsonPrintImpl {
 			this.objectMapper = new ObjectMapper();
 			this.objectMapper.registerModule(new JavaTimeModule());
 			this.objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
-			//this.objectMapper.configure(DeserializationFeature.FAIL_ON_IGNORED_PROPERTIES, false);
+			this.objectMapper.configure(DeserializationFeature.FAIL_ON_IGNORED_PROPERTIES, false);
 		}
 	}
 	
@@ -29,6 +31,11 @@ public class JsonPrint implements JsonPrintImpl {
 	///////////////////////////////////////////////////////
 	
 	private ObjectMapper objectMapper = null;
+	
+	@Override
+	public ObjectMapper getObjectMapper() {
+		return this.objectMapper;
+	}
 	
 	@Override
 	public String toJson(Object object) {
@@ -60,4 +67,21 @@ public class JsonPrint implements JsonPrintImpl {
 		System.out.println("Pretty JSON >>>>> " + this.toPrettyJson(object));
 	}
 
+	@Override
+	public void saveJson(File file, Object object) {
+		try {
+			this.objectMapper.writeValue(file, object);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+	@Override
+	public void savePrettyJson(File file, Object object) {
+		try {
+			this.objectMapper.writerWithDefaultPrettyPrinter().writeValue(file, object);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
 }

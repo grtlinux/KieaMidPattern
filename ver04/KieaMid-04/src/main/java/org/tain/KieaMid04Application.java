@@ -68,8 +68,10 @@ public class KieaMid04Application implements CommandLineRunner {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.boardWorking.loading();
-		if (!Flag.flag) this.boardWorking.fetching();
-		if (Flag.flag) this.boardWorking.testBoardInfoSome();;
+		if (Flag.flag) this.boardWorking.fetching();
+		if (Flag.flag) this.boardWorking.testBoardInfoSome();
+		if (Flag.flag) this.boardWorking.saveJsonFile();
+		if (Flag.flag) this.boardWorking.loadJsonFile();
 	}
 
 	///////////////////////////////////////////////////////////////////////////
