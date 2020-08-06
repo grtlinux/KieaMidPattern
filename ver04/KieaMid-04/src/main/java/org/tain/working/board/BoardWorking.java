@@ -51,6 +51,12 @@ public class BoardWorking {
 		
 		if (Flag.flag) {
 			this.boardRepository.findBoardInfoSome(100L).forEach(entity -> {
+				JsonPrint.getInstance().printPrettyJson(entity);
+			});
+		}
+		
+		if (!Flag.flag) {
+			this.boardRepository.findBoardInfoSome(100L).forEach(entity -> {
 				BoardObject boardObject = BoardObject.builder()
 						.id(entity.getId())
 						.title(entity.getTitle())
