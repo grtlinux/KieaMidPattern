@@ -1,6 +1,6 @@
 package org.tain.info.chun;
 
-public interface GrpSentInfo {
+public interface ChunInfo {
 
 	Integer getGrpNo();
 	String getGrpName();

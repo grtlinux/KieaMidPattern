@@ -8,7 +8,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.tain.domain.chun.Sent;
-import org.tain.info.chun.GrpSentInfo;
+import org.tain.info.chun.ChunInfo;
 
 @RepositoryRestResource
 public interface SentRepository extends JpaRepository<Sent, Integer>{
@@ -27,7 +27,7 @@ public interface SentRepository extends JpaRepository<Sent, Integer>{
 			+ " order by s.no desc "
 			+ ""
 		, nativeQuery = true)
-	List<GrpSentInfo> getAll();
+	List<ChunInfo> getAll();
 	
 	@Query(value = ""
 			+ " select "
@@ -50,5 +50,5 @@ public interface SentRepository extends JpaRepository<Sent, Integer>{
 			+ " where 1=1 "
 			+ ""
 		, nativeQuery = true)
-	public Page<GrpSentInfo> getPage(Pageable pageable);
+	public Page<ChunInfo> getPage(Pageable pageable);
 }

@@ -1,4 +1,4 @@
-package org.tain.controller.chun;
+package org.tain.controller.mid;
 
 import java.util.List;
 
@@ -16,25 +16,25 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import org.tain.info.chun.ChunInfo;
-import org.tain.repository.chun.SentRepository;
+import org.tain.info.mid.MidInfo;
+import org.tain.repository.mid.CompRepository;
 import org.tain.utils.CurrentInfo;
 
 import lombok.extern.slf4j.Slf4j;
 
 @RestController
-@RequestMapping(value = {"/rest/chun"})
+@RequestMapping(value = {"/rest/mid"})
 @Slf4j
-public class ChunRestController {
+public class MidRestController {
 
 	@Autowired
-	private SentRepository sentRepository;
+	private CompRepository compRepository;
 	
 	@RequestMapping(value = {"/list1"}, method = {RequestMethod.GET, RequestMethod.POST})
 	public ResponseEntity<?> list1(HttpEntity<String> httpEntity) throws Exception {
 		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
 		
-		List<ChunInfo> list = this.sentRepository.getAll();
+		List<MidInfo> list = this.compRepository.getAll();
 		
 		MultiValueMap<String,String> headers = new LinkedMultiValueMap<>();
 		headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
@@ -43,17 +43,17 @@ public class ChunRestController {
 	}
 	
 	@RequestMapping(value = {"/list2"}, method = {RequestMethod.GET, RequestMethod.POST})
-	public List<ChunInfo> list2() throws Exception {
+	public List<MidInfo> list2() throws Exception {
 		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
-		return this.sentRepository.getAll();
+		return this.compRepository.getAll();
 	}
 	
 	@RequestMapping(value = {"/page1"}, method = {RequestMethod.GET, RequestMethod.POST})
 	public ResponseEntity<?> page1(HttpEntity<String> httpEntity
-			, @PageableDefault(size = 5, sort = "no", direction = Sort.Direction.DESC) Pageable pageable) throws Exception {
+			, @PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) throws Exception {
 		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
 		
-		Page<ChunInfo> list = this.sentRepository.getPage(pageable);
+		Page<MidInfo> list = this.compRepository.getPage(pageable);
 		
 		MultiValueMap<String,String> headers = new LinkedMultiValueMap<>();
 		headers.add(HttpHeaders.CONTENT_TYPE, "application/json; charset=UTF-8");
@@ -62,8 +62,8 @@ public class ChunRestController {
 	}
 	
 	@RequestMapping(value = {"/page2"}, method = {RequestMethod.GET, RequestMethod.POST})
-	public Page<ChunInfo> page2(@PageableDefault(size = 5, sort = "no", direction = Sort.Direction.DESC) Pageable pageable) throws Exception {
+	public Page<MidInfo> page2(@PageableDefault(size = 5, sort = "id", direction = Sort.Direction.DESC) Pageable pageable) throws Exception {
 		log.info("KANG-20200730 >>>>> {} {}", CurrentInfo.get());
-		return this.sentRepository.getPage(pageable);
+		return this.compRepository.getPage(pageable);
 	}
 }
