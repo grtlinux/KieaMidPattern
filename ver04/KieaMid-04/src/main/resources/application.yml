@@ -77,10 +77,16 @@ project:
   author: Kiea Seok Kang
   
 file:
-  origin-json:
+  from:
+    board: src/main/resources/txt/board.txt
     chun:  src/main/resources/txt/org_1000.txt
     mid:   src/main/resources/txt/org_mid.txt
     word:  src/main/resources/txt/org_word2500.txt
+  to:
+    board: src/main/resources/json/board.json
+    chun:  src/main/resources/json/chun.json
+    mid:   src/main/resources/json/mid.json
+    word:  src/main/resources/json/word.json
 
 
 # --------------------------------------------------------

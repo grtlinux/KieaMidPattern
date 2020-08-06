@@ -6,6 +6,7 @@ import java.util.List;
 import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.tain.domain.board.Board;
 import org.tain.object.board.BoardObject;
@@ -24,6 +25,12 @@ public class BoardWorking {
 
 	@Autowired
 	private BoardRepository boardRepository;
+	
+	@Value("${file.from.word}")
+	private String fileFromWord;
+	
+	@Value("${file.to.word}")
+	private String fileToWord;
 	
 	public void loading() {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
@@ -95,7 +102,7 @@ public class BoardWorking {
 				lst.add(boardObject);
 			});
 			
-			JsonPrint.getInstance().savePrettyJson(new File("src/main/resources/json/Board.json"), lst);
+			JsonPrint.getInstance().savePrettyJson(new File(this.fileToWord), lst);
 			
 			if (!Flag.flag) System.exit(0);
 		}
@@ -111,7 +118,7 @@ public class BoardWorking {
 		if (Flag.flag) {
 			try {
 				List<BoardObject> lst = JsonPrint.getInstance().getObjectMapper().readValue(
-						new File("src/main/resources/json/Board.json")
+						new File(this.fileToWord)
 						, new TypeReference<List<BoardObject>>() {});
 				lst.forEach(dat -> {
 					Board board = this.boardRepository.save(Board.builder()

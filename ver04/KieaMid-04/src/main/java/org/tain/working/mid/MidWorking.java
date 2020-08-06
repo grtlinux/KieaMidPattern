@@ -30,8 +30,11 @@ public class MidWorking {
 	@Autowired
 	private CompRepository compRepository;
 	
-	@Value("${file.origin-json.mid}")
-	private String fileOriginJsonMid;
+	@Value("${file.from.mid}")
+	private String fileFromMid;
+	
+	@Value("${file.to.mid}")
+	private String fileToMid;
 	
 	public void loading() {
 		log.info("KANG-20200803 >>>>> {} {}", CurrentInfo.get());
@@ -40,7 +43,7 @@ public class MidWorking {
 			BufferedReader br = null;
 			String line = null;
 			try {
-				br = new BufferedReader(new FileReader(this.fileOriginJsonMid));
+				br = new BufferedReader(new FileReader(this.fileFromMid));
 				
 				String code = null;
 				Division division = null;

@@ -30,8 +30,11 @@ public class ChunWorking {
 	@Autowired
 	private TipRepository tipRepository;
 	
-	@Value("${file.origin-json.chun}")
-	private String fileOriginJsonChun;
+	@Value("${file.from.chun}")
+	private String fileFromChun;
+	
+	@Value("${file.to.chun}")
+	private String fileToChun;
 	
 	public void loading() {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
@@ -40,7 +43,7 @@ public class ChunWorking {
 			// text -> table
 			BufferedReader br = null;
 			try {
-				br = new BufferedReader(new FileReader(this.fileOriginJsonChun));
+				br = new BufferedReader(new FileReader(this.fileFromChun));
 				String line = null;
 				
 				Grp grp = null;

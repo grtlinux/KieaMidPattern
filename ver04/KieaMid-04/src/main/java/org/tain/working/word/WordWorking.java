@@ -21,8 +21,11 @@ public class WordWorking {
 	@Autowired
 	private WordRepository wordRepository;
 	
-	@Value("${file.origin-json.word}")
-	private String fileOriginJsonWord;
+	@Value("${file.from.word}")
+	private String fileFromWord;
+	
+	@Value("${file.to.word}")
+	private String fileToWord;
 	
 	public void loading() {
 		log.info("KANG-20200803 >>>>> {} {}", CurrentInfo.get());
@@ -31,7 +34,7 @@ public class WordWorking {
 			// text -> table
 			BufferedReader br = null;
 			try {
-				br = new BufferedReader(new FileReader(this.fileOriginJsonWord));
+				br = new BufferedReader(new FileReader(this.fileFromWord));
 				String line = null;
 				
 				Integer idx = 1;
