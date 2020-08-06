@@ -78,9 +78,9 @@ project:
   
 file:
   origin-json:
-    chun:  src/main/resources/json/org_1000.txt
-    mid:   src/main/resources/json/org_mid.txt
-    word:  src/main/resources/json/org_word2500.txt
+    chun:  src/main/resources/txt/org_1000.txt
+    mid:   src/main/resources/txt/org_mid.txt
+    word:  src/main/resources/txt/org_word2500.txt
 
 
 # --------------------------------------------------------
