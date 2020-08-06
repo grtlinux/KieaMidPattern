@@ -10,7 +10,6 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
-import javax.persistence.Lob;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -60,8 +59,7 @@ public class Board {
 	@Column(name = "sub_title", length = 256)
 	private String subTitle;
 	
-	@Lob
-	@Column(name = "content")
+	@Column(name = "content", length = 10240)
 	private String content;
 	
 	@Column(name = "user_id", length = 16)
@@ -69,6 +67,7 @@ public class Board {
 	
 	//@JsonIgnore
 	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
+	//@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
 	@Column(name = "create_date")
 	@CreationTimestamp
 	private LocalDateTime createdDate;

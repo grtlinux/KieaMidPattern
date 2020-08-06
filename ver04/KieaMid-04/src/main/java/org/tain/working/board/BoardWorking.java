@@ -5,6 +5,7 @@ import java.util.stream.IntStream;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tain.domain.board.Board;
+import org.tain.object.board.BoardObject;
 import org.tain.repository.board.BoardRepository;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
@@ -41,6 +42,23 @@ public class BoardWorking {
 		if (Flag.flag) {
 			this.boardRepository.findAll().forEach(entity -> {
 				JsonPrint.getInstance().printPrettyJson(entity);
+			});
+		}
+	}
+	
+	public void testBoardInfoSome() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			this.boardRepository.findBoardInfoSome(100L).forEach(entity -> {
+				BoardObject boardObject = BoardObject.builder()
+						.id(entity.getId())
+						.title(entity.getTitle())
+						.subTitle(entity.getSubTitle())
+						.content(entity.getContent())
+						.userId(entity.getUserId())
+						.build();
+				JsonPrint.getInstance().printPrettyJson(boardObject);
 			});
 		}
 	}

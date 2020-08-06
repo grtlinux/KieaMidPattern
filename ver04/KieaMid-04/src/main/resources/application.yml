@@ -46,6 +46,8 @@ spring:
   devtools:
     livereload.enabled: true
 
+spring.jpa.properties.hibernate.jdbc.time_zone: UTC+9
+
 logging:
   file:
     path: logs/

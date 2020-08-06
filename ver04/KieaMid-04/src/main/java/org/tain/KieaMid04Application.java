@@ -35,6 +35,11 @@ public class KieaMid04Application implements CommandLineRunner {
 		if (Flag.flag) job03();
 		if (Flag.flag) job04();
 		if (Flag.flag) job05();
+		if (Flag.flag) job06();
+		if (Flag.flag) job07();
+		if (Flag.flag) job08();
+		if (Flag.flag) job09();
+		if (Flag.flag) job10();
 	}
 
 	///////////////////////////////////////////////////////////////////////////
@@ -64,6 +69,7 @@ public class KieaMid04Application implements CommandLineRunner {
 		
 		if (Flag.flag) this.boardWorking.loading();
 		if (Flag.flag) this.boardWorking.fetching();
+		if (!Flag.flag) this.boardWorking.testBoardInfoSome();;
 	}
 
 	///////////////////////////////////////////////////////////////////////////
@@ -79,6 +85,26 @@ public class KieaMid04Application implements CommandLineRunner {
 	}
 
 	private void job05() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+	}
+	
+	private void job06() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+	}
+
+	private void job07() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+	}
+
+	private void job08() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+	}
+	
+	private void job09() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+	}
+
+	private void job10() {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
 	}
 }
