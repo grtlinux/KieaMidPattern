@@ -34,7 +34,17 @@ bin/
 build/
 logs/
 
-Board.json
+board.json
 
+chun.json
+grp.json
+sent.json
+tip.json
+
+mid.json
+division.json
+comp.json
+
+word.json
 
 

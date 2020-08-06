@@ -1,12 +1,16 @@
 package org.tain.working.word;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 import org.tain.domain.word.Word;
+import org.tain.object.word.WordObject;
 import org.tain.repository.word.WordRepository;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
@@ -66,6 +70,27 @@ public class WordWorking {
 			} finally {
 				if (br != null) try { br.close(); } catch (Exception e) {}
 			}
+		}
+	}
+	
+	public void saveJsonFile() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			List<WordObject> lst = new ArrayList<>();
+			
+			this.wordRepository.findAll().forEach(entity -> {
+				WordObject wordObject = WordObject.builder()
+						.idx(entity.getIdx())
+						.word(entity.getWord())
+						.mean(entity.getMean())
+						.build();
+				lst.add(wordObject);
+			});
+			
+			JsonPrint.getInstance().savePrettyJson(new File(this.fileToWord), lst);
+			
+			if (!Flag.flag) System.exit(0);
 		}
 	}
 }

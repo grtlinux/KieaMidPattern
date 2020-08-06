@@ -26,11 +26,11 @@ public class BoardWorking {
 	@Autowired
 	private BoardRepository boardRepository;
 	
-	@Value("${file.from.word}")
-	private String fileFromWord;
+	@Value("${file.from.board}")
+	private String fileFromBoard;
 	
-	@Value("${file.to.word}")
-	private String fileToWord;
+	@Value("${file.to.board}")
+	private String fileToBoard;
 	
 	public void loading() {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
@@ -102,7 +102,7 @@ public class BoardWorking {
 				lst.add(boardObject);
 			});
 			
-			JsonPrint.getInstance().savePrettyJson(new File(this.fileToWord), lst);
+			JsonPrint.getInstance().savePrettyJson(new File(this.fileToBoard), lst);
 			
 			if (!Flag.flag) System.exit(0);
 		}
@@ -118,7 +118,7 @@ public class BoardWorking {
 		if (Flag.flag) {
 			try {
 				List<BoardObject> lst = JsonPrint.getInstance().getObjectMapper().readValue(
-						new File(this.fileToWord)
+						new File(this.fileToBoard)
 						, new TypeReference<List<BoardObject>>() {});
 				lst.forEach(dat -> {
 					Board board = this.boardRepository.save(Board.builder()

@@ -45,11 +45,11 @@ public class KieaMid04Application implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
 		
-		if (Flag.flag) job01();
-		if (Flag.flag) job02();
-		if (Flag.flag) job03();
-		if (Flag.flag) job04();
-		if (Flag.flag) job05();
+		if (Flag.flag) job01();  // map test
+		if (Flag.flag) job02();  // board
+		if (Flag.flag) job03();  // chun
+		if (Flag.flag) job04();  // mid
+		if (Flag.flag) job05();  // word
 		if (Flag.flag) job06();
 		if (Flag.flag) job07();
 		if (Flag.flag) job08();
@@ -83,10 +83,10 @@ public class KieaMid04Application implements CommandLineRunner {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.boardWorking.loading();
-		if (!Flag.flag) this.boardWorking.fetching();
-		if (!Flag.flag) this.boardWorking.testBoardInfoSome();
-		if (!Flag.flag) this.boardWorking.saveJsonFile();
-		if (!Flag.flag) this.boardWorking.loadJsonFile();
+		if (Flag.flag) this.boardWorking.fetching();
+		if (Flag.flag) this.boardWorking.testBoardInfoSome();
+		if (Flag.flag) this.boardWorking.saveJsonFile();
+		if (Flag.flag) this.boardWorking.loadJsonFile();
 	}
 
 	///////////////////////////////////////////////////////////////////////////
@@ -126,6 +126,7 @@ public class KieaMid04Application implements CommandLineRunner {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.wordWorking.loading();
+		if (Flag.flag) this.wordWorking.saveJsonFile();;
 	}
 	
 	///////////////////////////////////////////////////////////////////////////
