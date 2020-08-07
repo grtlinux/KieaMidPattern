@@ -100,6 +100,8 @@ public class KieaMid04Application implements CommandLineRunner {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.chunWorking.loading();
+		if (Flag.flag) this.chunWorking.saveJsonFile();
+		if (Flag.flag) this.chunWorking.loadFromJsonFile();
 	}
 
 	///////////////////////////////////////////////////////////////////////////

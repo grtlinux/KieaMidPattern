@@ -1,9 +1,5 @@
 package org.tain.domain.board;
 
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,16 +9,11 @@ import javax.persistence.Index;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonFormat.Shape;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import org.tain.utils.TimestampEntity;
 
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Entity
@@ -38,15 +29,9 @@ import lombok.NoArgsConstructor;
 	, allocationSize = 1
 )
 @Data
+@EqualsAndHashCode(callSuper = true)
 @NoArgsConstructor
-@JsonIgnoreProperties(value = {
-		""
-		, "create_date"
-		, "update_date"
-		, "job_date"
-		, "work_date"
-		})
-public class Board {
+public class Board extends TimestampEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "board_seq")
@@ -64,50 +49,19 @@ public class Board {
 	
 	@Column(name = "user_id", length = 16)
 	private String userId;
-	
-	//@JsonIgnore
-	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
-	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
-	//@DateTimeFormat(pattern = "yyyy-MM-dd HH:mm:ss")
-	@Column(name = "create_date")
-	@CreationTimestamp
-	private LocalDateTime createdDate;
-	
-	@JsonIgnore
-	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
-	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
-	@Column(name = "update_date")
-	@UpdateTimestamp
-	private Timestamp updatedDate;
-	
-	//@JsonIgnore
-	@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
-	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
-	@Column(name = "job_date")
-	@UpdateTimestamp
-	private Date jobDate;
-	
-	@JsonIgnore
-	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss")
-	//@JsonFormat(shape = Shape.STRING, pattern = "yyyy-MM-dd'T'HH:mm:ss", timezone = "Asia/Seoul")
-	@Column(name = "work_date")
-	@UpdateTimestamp
-	private Date workDate;
-	
+		
 	@Builder
 	public Board(
 			Long id,
 			String title,
 			String subTitle,
 			String content,
-			String userId,
-			LocalDateTime createdDate
+			String userId
 			) {
 		this.id = id;
 		this.title = title;
 		this.subTitle = subTitle;
 		this.content = content;
 		this.userId = userId;
-		this.createdDate = createdDate;
 	}
 }

@@ -107,4 +107,28 @@ public class MidWorking {
 			}
 		}
 	}
+	
+	public void saveJsonFile() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			// division to json file
+		}
+		
+		if (Flag.flag) {
+			// comp to json file
+		}
+	}
+	
+	public void loadFromJsonFile() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			// division to json file
+		}
+		
+		if (Flag.flag) {
+			// comp to json file
+		}
+	}
 }

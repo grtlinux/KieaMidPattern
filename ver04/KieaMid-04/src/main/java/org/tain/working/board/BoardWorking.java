@@ -94,10 +94,6 @@ public class BoardWorking {
 						.subTitle(entity.getSubTitle())
 						.content(entity.getContent())
 						.userId(entity.getUserId())
-						.createdDate(entity.getCreatedDate())
-						.updatedDate(entity.getUpdatedDate())
-						.jobDate(entity.getJobDate())
-						.workDate(entity.getWorkDate())
 						.build();
 				lst.add(boardObject);
 			});
@@ -127,7 +123,6 @@ public class BoardWorking {
 							.subTitle(dat.getSubTitle())
 							.content(dat.getContent())
 							.userId(dat.getUserId())
-							.createdDate(dat.getCreatedDate())
 							.build());
 					JsonPrint.getInstance().printPrettyJson(board);
 				});

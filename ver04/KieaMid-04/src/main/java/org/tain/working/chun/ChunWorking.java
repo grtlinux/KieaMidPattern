@@ -1,7 +1,9 @@
 package org.tain.working.chun;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -14,6 +16,9 @@ import org.tain.repository.chun.SentRepository;
 import org.tain.repository.chun.TipRepository;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
+import org.tain.utils.JsonPrint;
+
+import com.fasterxml.jackson.core.type.TypeReference;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -102,5 +107,66 @@ public class ChunWorking {
 				if (br != null) try { br.close(); } catch (Exception e) {}
 			}
 		}
+	}
+	
+	@Value("${file.to.grp}")
+	private String fileToGrp;
+	
+	@Value("${file.to.sent}")
+	private String fileToSent;
+	
+	@Value("${file.to.tip}")
+	private String fileToTip;
+	
+	public void saveJsonFile() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			// grp to json file
+			List<Grp> lstGrp = this.grpRepository.findAll();
+			JsonPrint.getInstance().savePrettyJson(new File(this.fileToGrp), lstGrp);
+		}
+		
+		if (Flag.flag) {
+			// sent to json file
+			// TODO: include sub tables, to grp(no)
+			List<Sent> lstSent = this.sentRepository.findAll();
+			JsonPrint.getInstance().savePrettyJson(new File(this.fileToSent), lstSent);
+		}
+		
+		if (Flag.flag) {
+			// tip to json file
+			// TODO: include sub tables, to sent(no)
+			List<Tip> lstTip = this.tipRepository.findAll();
+			JsonPrint.getInstance().savePrettyJson(new File(this.fileToTip), lstTip);
+		}
+		
+		if (!Flag.flag) System.exit(0);
+	}
+	
+	public void loadFromJsonFile() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		
+		if (!Flag.flag) {
+			// grp to json file
+			try {
+				List<Grp> lstGrp = JsonPrint.getInstance().getObjectMapper()
+						.readValue(new File(this.fileToGrp), new TypeReference<List<Grp>>() {});
+				this.grpRepository.deleteAll();
+				this.grpRepository.saveAll(lstGrp);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+		
+		if (Flag.flag) {
+			// sent to json file
+		}
+		
+		if (Flag.flag) {
+			// tip to json file
+		}
+		
+		if (!Flag.flag) System.exit(0);
 	}
 }
