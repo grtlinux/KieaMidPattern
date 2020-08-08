@@ -1,8 +1,6 @@
 package org.tain;
 
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.TimeZone;
 
 import javax.annotation.PostConstruct;
@@ -15,6 +13,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
 import org.tain.utils.JsonPrint;
+import org.tain.utils.Sample;
 import org.tain.working.board.BoardWorking;
 import org.tain.working.chun.ChunWorking;
 import org.tain.working.mid.MidWorking;
@@ -63,13 +62,7 @@ public class KieaMid04Application implements CommandLineRunner {
 	
 	private void job01() {
 		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
-		
-		Map<String,Object> map = new HashMap<>();
-		map.put("name", "Kiea 강석");
-		map.put("date", LocalDateTime.now());
-		map.put("message", "Hello, world!!!");
-		
-		JsonPrint.getInstance().printPrettyJson(map);
+		JsonPrint.getInstance().printPrettyJson(Sample.getMap());
 	}
 
 	///////////////////////////////////////////////////////////////////////////
