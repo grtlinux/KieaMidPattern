@@ -15,6 +15,7 @@ import org.tain.utils.Flag;
 import org.tain.utils.JsonPrint;
 import org.tain.utils.Sample;
 import org.tain.working.board.BoardWorking;
+import org.tain.working.word.WordWorking;
 
 import lombok.extern.slf4j.Slf4j;
 
@@ -43,7 +44,7 @@ public class KieaMid05Application implements CommandLineRunner {
 		
 		if (Flag.flag) job01();  // Test
 		if (Flag.flag) job02();  // Board
-		if (Flag.flag) job03();
+		if (Flag.flag) job03();  // Word
 		if (Flag.flag) job04();
 		if (Flag.flag) job05();
 		if (Flag.flag) job06();
@@ -78,11 +79,20 @@ public class KieaMid05Application implements CommandLineRunner {
 	///////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////
+
+	@Autowired
+	private WordWorking wordWorking;
 	
 	private void job03() {
 		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) this.wordWorking.loading();
 	}
 
+	///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
+	
 	private void job04() {
 		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
 	}

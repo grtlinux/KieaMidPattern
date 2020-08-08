@@ -34,4 +34,35 @@
 
 
 
+<!-- page2 -->
+<th:block th:fragment="page2">
+	<!-- page2 -->
+	<nav aria-label="Page navigation" style="text-align:center;">
+		<ul class="pagination" th:with="startNumber=${T(Math).floor(wordList.number/10)}*10+1, endNumber=(${wordList.totalPages} > ${startNumber}+9) ? ${startNumber}+9 : ${wordList.totalPages}">
+			<li><a aria-label="Previous" th:href="@{/word/list(page=1)}">&laquo;</a></li>
+			<li th:style="${wordList.first} ? 'display:none'">
+				<a th:href="@{/word/list(page=${wordList.number})}">&lsaquo;</a>
+			</li>
+
+			<li th:each="page :${#numbers.sequence(startNumber, endNumber)}" th:class="(${page} == ${wordList.number}+1) ? 'active'">
+				<a th:href="@{/word/list(page=${page})}" th:text="${page}"><span class="sr-only"></span></a>
+			</li>
+
+			<li th:style="${wordList.last} ? 'display:none'">
+				<a th:href="@{/word/list(page=${wordList.number}+2)}">&rsaquo;</a>
+			</li>
+			<li><a aria-label="Next" th:href="@{/word/list(page=${wordList.totalPages})}">&raquo;</a></li>
+		</ul>
+	</nav>
+	<div style="text-align:center;">
+		(<!-- th:block th:text="${wordList.content}"/ --> <th:block th:text="${wordList.totalElements}"/> : <th:block th:text="${wordList.numberOfElements}"/> : <th:block th:text="${wordList.number}+1"/> / <th:block th:text="${wordList.totalPages}"/>)
+	</div>
+	<!-- /page2 -->
+</th:block>
+<!-- /page2 -->
+
+
+
+
+
 </html>

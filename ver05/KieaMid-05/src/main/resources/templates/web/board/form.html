@@ -16,7 +16,7 @@
 	<!-- main -->
 	<div class="container">
 		<div class="page-header">
-			<h1>게시글 등록</h1>
+			<h1>Board 등록</h1>
 		</div>
 		<br/>
 		<input id="board_id" type="hidden" th:value="${board?.id}"/>
@@ -72,7 +72,7 @@
 				content: $('#board_content').val()
 			});
 			$.ajax({
-				url: _contextPath_ + "/api/boards/",
+				url: _contextPath_ + "api/boards/",
 				type: "POST",
 				data: jsonData,
 				contentType: "application/json",
@@ -82,7 +82,7 @@
 				dataType: "json",
 				success: function() {
 					alert('저장 성공~~');
-					location.href = _contextPath_ + '/board/list';
+					location.href = _contextPath_ + 'board/list';
 				},
 				error: function() {
 					alert('저장 실패!!');
@@ -100,14 +100,14 @@
 				createdDate: $('#board_create_date').val()
 			});
 			$.ajax({
-				url: _contextPath_ + "/api/boards/" + $('#board_id').val(),
+				url: _contextPath_ + "api/boards/" + $('#board_id').val(),
 				type: "PUT",
 				data: jsonData,
 				contentType: "application/json",
 				dataType: "json",
 				success: function() {
 					alert('수정 성공~~');
-					location.href = _contextPath_ + '/board/list';
+					location.href = _contextPath_ + 'board/list';
 				},
 				error: function() {
 					alert('수정 실패!!');
@@ -116,11 +116,11 @@
 		});
 		$('#delete').click(function() {
 			$.ajax({
-				url: _contextPath_ + "/api/boards/" + $('#board_id').val(),
+				url: _contextPath_ + "api/boards/" + $('#board_id').val(),
 				type: "DELETE",
 				success: function() {
 					alert('삭제 성공~~');
-					location.href = _contextPath_ + '/board/list';
+					location.href = _contextPath_ + 'board/list';
 				},
 				error: function() {
 					alert('삭제 실패!!');

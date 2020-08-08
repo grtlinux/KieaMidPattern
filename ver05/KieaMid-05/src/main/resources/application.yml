@@ -69,8 +69,24 @@ spring.profiles: proj-default
 proj-info:
   title: zero project
   auhor: Kiea Seok Kang
-  
-  
+
+file:
+  from:
+    board: src/main/resources/txt/board.txt
+    word:  src/main/resources/txt/org_word2500.txt
+    chun:  src/main/resources/txt/org_1000.txt
+    mid:   src/main/resources/txt/org_mid.txt
+  to:
+    board:     src/main/resources/json/board.json     # board
+    word:      src/main/resources/json/word.json      # word
+    chun:      src/main/resources/json/chun.json      # chun
+    grp:       src/main/resources/json/grp.json
+    sent:      src/main/resources/json/sent.json
+    tip:       src/main/resources/json/tip.json
+    mid:       src/main/resources/json/mid.json       # mid
+    division:  src/main/resources/json/division.json
+    comp:      src/main/resources/json/comp.json
+
 ---
 # ---------- proj-local ------------------
 spring.profiles: proj-local
