@@ -1616,153 +1616,153 @@ biology              생물학.
 botany               식물학.
 geology              지질학.
 chemistry            화학.
-affection            
-piety                
-bravery              
-sacred               
-quotation            
-drain                
-intercourse          
-contempt             
-mislead              
-prospect             
-decent               
-condemn              
-solitude             
-prolong              
-wretched             
-strife               
-advocate             
-remote               
-dialect              
-notion               
-mammal               
-neglectful           
-astray               
-conviction           
-picturesque          
-correction           
-preface              
-stir                 
-shrewd               
-negligence           
-torment              
-passionate           
-analysis             
-mold                 
-bewilder             
-discourage           
-forsake              
-impair               
-fright               
-controversy          
-lade                 
-initial              
-inspiration          
-locomotive           
-arouse               
-transient            
-sober                
-dominion             
-clumsy               
-conspicuous          
-distress             
-bough                
-outlet               
-pregnant             
-detest               
-retire               
-curse                
-comrade              
-chaos                
-signify              
-quote                
-enthusiasm           
-literate             
-supplement           
-assent               
-bundle               
-skeptical            
-farewell             
-exaggerate           
-peer                 
-hypocrisy            
-cynical              
-catastrophe          
-astound              
-monotonous           
-somewhat             
-arrogant             
-treachery            
-alert                
-applause             
-aloof                
-doom                 
-intense              
-intrude              
-scul[ture            
-justify              
-mercy                
-allowance            
-epoch                
-chat                 
-instrument           
-spectacle            
-bondage              
-awkward              
-dismal               
-idle                 
-feast                
-vein                 
-comment              
-equipment            
-disgust              
-sermon               
-substance            
-expose               
-patience             
-assemble             
-collapse             
-dread                
-plea                 
-perpetual            
-utility              
-intoxicate           
-lunatic              
-fragile              
-wicked               
-sterile              
-oath                 
-forlorn              
-specific             
-prudent              
-sheer                
-tolerance            
-filthy               
-hostile              
-shelter              
-ordinary             
-puzzle               
-haughty              
-patient              
-reckless             
-temporary            
-alternative          
-internal             
-flourish             
-incredible           
-descent              
-sane                 
-substantial          
-intuition            
-profile              
-emphasize            
-whimsical            
-pang                 
-sinister             
-apparatus            
-upright              
-outcome              
+affection            애정.
+piety                경건. 신앙심.
+bravery              용감. 용기.
+sacred               신성한.
+quotation            인용. 시세. 견적서.
+drain                배수(구). 배수하다. 배출하다.
+intercourse          교제.
+contempt             경멸. 모욕.
+mislead              잘못 인도하다.
+prospect             조망. 전망.
+decent               적당한. 알맞은.
+condemn              비난하다.
+solitude             고독.
+prolong              연장하다. 늘이다.
+wretched             불쌍한. 가엾은.
+strife               분쟁. 투쟁.
+advocate             주장하다. 옹호하다.
+remote               멀리. 멀어진.
+dialect              방언.
+notion               개념. 관념.
+mammal               포유동물.
+neglectful           태만한. 부주의한.
+astray               길을 잃은.
+conviction           확신. 신념.
+picturesque          아름다운. 그림 같은.
+correction           수정. 정정.
+preface              머리말. 서운.
+stir                 선동하다. 휘젓다.
+shrewd               약삭빠른. 빈틈 없는.
+negligence           태만. 부주의.
+torment              고통. 고통을 주다.
+passionate           열렬한. 정열적인.
+analysis             분석.
+mold                 형. 특성.
+bewilder             당혹케 하다.
+discourage           용기를 잃게 하다. 낙담시키다.
+forsake              저버리다. 버리고 가다.
+impair               악화시키다. 해치다.
+fright               공포. 놀람.
+controversy          논쟁.
+lade                 (배.차 등에) 싣다.
+initial              최초의. 머리글자.
+inspiration          영감.
+locomotive           기관차.
+arouse               깨우다. 자극하다.
+transient            일시적인.
+sober                술에 취하지 않은. 맑은 정신의. 차분한.
+dominion             지배(권)
+clumsy               서투른. 솜씨없는.
+conspicuous          특징적인. 눈에 띄는.
+distress             고통. 걱정. 괴롭히다.
+bough                큰 가지.
+outlet               배출구, 대리점.
+pregnant             임신한.
+detest               미워하다. 몹시 싫어하다.
+retire               퇴직하다.
+curse                저주. 욕설. 저주하다.
+comrade              동료.
+chaos                혼돈. 무질서.
+signify              뜻하다. 나타나다.
+quote                인용하다.
+enthusiasm           열심. 열광.
+literate             읽고 쓸 수 있는.
+supplement           부록. 추가물. 보충물. 보충하다. 추가하다.
+assent               동의. 동의하다.
+bundle               다발. 묶음. 무리.
+skeptical            회의적인.
+farewell             송별의. 결별의.
+exaggerate           과장하다.
+peer                 동료. 자세히 보다.
+hypocrisy            위선. 위선행위.
+cynical              냉소적인.
+catastrophe          큰 재해. 대참사.
+astound              깜짝 놀라게 하다.
+monotonous           단조로운.
+somewhat             어느 정도. 얼마간.
+arrogant             기만한.
+treachery            배반. 배신. 반역.
+alert                경계, 경보. 방심하지 않는.
+applause             박수 갈채.
+aloof                멀어져. 멀리서.
+doom                 운명. 운명짓다. ..의 운명을 정하다.
+intense              강렬한.
+intrude              밀어 넣다. 강요하다. 끼어들다.
+scul[ture            조각.
+justify              정당화하다.
+mercy                자비. 연민.
+allowance            수당. ..비. 한도.
+epoch                시대. 신기원.
+chat                 잡담. 잡담하다. 담소하다.
+instrument           도구. 악기.
+spectacle            광경. 안경.
+bondage              속박. 노예의 신분.
+awkward              서투른. 솜씨없는. 거북한.
+dismal               음산한. 침울한.
+idle                 게으른, 한가한.
+feast                축제.
+vein                 혈관. 기질. 기분.
+comment              설명하다. 논평하다. 설명. 논평.
+equipment            설비. 장비.
+disgust              싫어지게 하다. 메스껍게 하다.
+sermon               설교.
+substance            본질. 물질.
+expose               드러내다. 노출시키다.
+patience             인내(력)
+assemble             모으다. 집합시키다.
+collapse             붕괴.
+dread                두려워하다. 무서워하다. 공포. 불한.
+plea                 탄원. 변명.
+perpetual            영원한. 끊임없는.
+utility              유익. 효용.
+intoxicate           취하게 하다. 도취시키다.
+lunatic              정신 이상의. 미치광이. 정신 이상자.
+fragile              부서지기 쉬운.
+wicked               사악한.
+sterile              불모의.
+oath                 맹세. 선언. 서약.
+forlorn              버림받은. 쓸쓸한.
+specific             특정한.
+prudent              사려 깊은. 분별 있는.
+sheer                완전한. 순전한.
+tolerance            인내.
+filthy               더러운. 불길한.
+hostile              적대적인.
+shelter              은신처.
+ordinary             보통의.
+puzzle               당황하게 하다.
+haughty              오만한.
+patient              인내심이 강한. 환자.
+reckless             무모한. 분별 없는.
+temporary            일시적인.
+alternative          양자택일의. 대안.
+internal             내부의. 내면적인.
+flourish             반영하다.
+incredible           믿을 수 없는.
+descent              하강. 저하.
+sane                 제정신의. 분별 있는.
+substantial          실질적인. 상당한.
+intuition            직관.
+profile              옆모습. 윤곽. 인물 소개.
+emphasize            강조하다.
+whimsical            변덕스러운. 별난.
+pang                 비통. 마음의 고통.
+sinister             불길한. 사악한.
+apparatus            장치. 기구.
+upright              똑바른. 곧은.
+outcome              결과.
 dismiss              
 agitate              
 remedy               
