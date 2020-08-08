@@ -1,4 +1,4 @@
-package org.tain.repository.domain;
+package org.tain.repository.board;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;

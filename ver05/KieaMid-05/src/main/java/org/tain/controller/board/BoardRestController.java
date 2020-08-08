@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 import org.tain.domain.board.Board;
-import org.tain.repository.domain.BoardRepository;
+import org.tain.repository.board.BoardRepository;
 import org.tain.utils.CurrentInfo;
 
 import lombok.extern.slf4j.Slf4j;

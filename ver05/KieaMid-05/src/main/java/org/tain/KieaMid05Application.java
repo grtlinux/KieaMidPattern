@@ -14,7 +14,7 @@ import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
 import org.tain.utils.JsonPrint;
 import org.tain.utils.Sample;
-import org.tain.working.BoardWorking;
+import org.tain.working.board.BoardWorking;
 
 import lombok.extern.slf4j.Slf4j;
 

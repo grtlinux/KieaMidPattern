@@ -7,7 +7,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 import org.tain.domain.board.Board;
-import org.tain.repository.domain.BoardRepository;
+import org.tain.repository.board.BoardRepository;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
 

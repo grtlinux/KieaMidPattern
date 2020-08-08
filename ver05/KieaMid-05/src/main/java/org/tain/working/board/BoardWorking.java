@@ -1,11 +1,11 @@
-package org.tain.working;
+package org.tain.working.board;
 
 import java.util.stream.IntStream;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.tain.domain.board.Board;
-import org.tain.repository.domain.BoardRepository;
+import org.tain.repository.board.BoardRepository;
 import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
 import org.tain.utils.JsonPrint;
