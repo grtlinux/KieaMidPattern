@@ -1,0 +1,90 @@
+
+
+server:
+  port: 8080
+  servlet.context-path: /v0.1
+
+spring:
+  profiles.active:
+  - proj-default
+  #- proj-local
+  #- proj-test
+  #- proj-read
+
+  h2.console:
+    enabled: true
+    path: /h2
+    settings:
+      trace: false
+      web-allow-others: true
+  datasource:
+    hikari:
+      jdbc-url: jdbc:h2:tcp://localhost:9092/kangdb
+      driver-class-name: org.h2.Driver
+      username: sa
+      password:
+  jpa:
+    show-sql: true
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate.ddl-auto: create
+  data.rest:
+    base-path: /api
+    default-page-size: 5
+    max-page-size: 50
+  thymeleaf:
+    enabled: true
+    encoding: utf-8
+    cache: false
+    prefix: classpath:templates/
+    suffix: .html
+  servlet.multipart:
+    enabled: true
+    location: ~/FILES
+    max-file-size: 5GB
+    max-request-size: 5GB
+  devtools:
+    livereload.enabled: true
+
+logging:
+  file:
+    path: logs/
+    max-size: 10MB
+  pattern:
+    console: "%clr(%d{HH:mm:ss} %p){magenta} - %m%n"
+    file: "%d %p [%-10thread] [%-30logger{30}] - %m%n"
+  level:
+    root: info
+    org.tain.*: info
+    org.hibernate.SQL: info
+    org.hibernate.type: info
+    org.hibernate.type.descriptor.sql.BasicBinder: trace
+    org.thymeleaf: info
+    org.h2.server.web: info
+
+---
+# ---------- proj-default ------------------
+spring.profiles: proj-default
+
+proj-info:
+  title: zero project
+  auhor: Kiea Seok Kang
+  
+  
+---
+# ---------- proj-local ------------------
+spring.profiles: proj-local
+
+
+---
+# ---------- proj-test ------------------
+spring.profiles: proj-test
+
+
+---
+# ---------- proj-real ------------------
+spring.profiles: proj-real
+
+
+
+
