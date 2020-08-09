@@ -1763,241 +1763,241 @@ sinister             불길한. 사악한.
 apparatus            장치. 기구.
 upright              똑바른. 곧은.
 outcome              결과.
-dismiss              
-agitate              
-remedy               
-sway                 
-trail                
-litter               
-riot                 
-tact                 
-solitary             
-response             
-dialogue             
-resign               
-insert               
-aspire               
-solution             
-precious             
-immediate            
-excursion            
-steer                
-fluent               
-pursue               
-ascertain            
-competent            
-stubborn             
-vanish               
-speculate            
-mourning             
-ascent               
-malice               
-imply                
-restrict             
-trap                 
-resemblance          
-portrait             
-adequate             
-praiseworthy         
-motive               
-temptation           
-evaluate             
-attract              
-brute                
-attractive           
-chart                
-prophet              
-reward               
-column               
-movement             
-swell                
-praise               
-confine              
-target               
-cowardly             
-route                
-pioneer              
-faculty              
-brave                
-species              
-seize                
-flavor               
-craft                
-porter               
-competence           
-vary                 
-bold                 
-anticipate           
-celebrate            
-courtesy             
-hare                 
-lavatory             
-sail                 
-severe               
-concept              
-thorough             
-intimate             
-strive               
-royal                
-similarity           
-anecdote             
-vague                
-category             
-funeral              
-enthusiastic         
-barrier              
-indicate             
-polish               
-upset                
-mankind              
-suite                
-sigh                 
-existence            
-phenomenon           
-descend              
-principal            
-recognize            
-tiny                 
-reference            
-flame                
-reap                 
-dust                 
-project              
-destroy              
-wholly               
-conflict             
-aspect               
-worship              
-decade               
-awe                  
-suspect              
-stuff                
-annoy                
-urgent               
-splendid             
-greed                
-mere                 
-invalid              
-slavery              
-associate            
-unique               
-slender              
-rigid                
-spoil                
-section              
-primary              
-trace                
-arithmetic           
-remain               
-twilight             
-numerous             
-mingle               
-winner               
-ornament             
-material             
-obscure              
-institution          
-reasonable           
-peril                
-perfect              
-oblige               
-link                 
-moderate             
-convenience          
-visible              
-orthodox             
-terminal             
-threat               
-assert               
-dawn                 
-visual               
-elect                
-tremendous           
-neglect              
-imperial             
-limit                
-troublesome          
-lonely               
-suspicion            
-caution              
-mourn                
-frame                
-forward              
-alien                
-pious                
-dye                  
-hasten               
-grave                
-pier                 
-heritage             
-folly                
-concrete             
-hazard               
-status               
-abnormal             
-relief               
-ridiculous           
-invitation           
-function             
-erect                
-argument             
-superstition         
-notice               
-situation            
-attempt              
-hatred               
-marvel               
-passion              
-generation           
-circuit              
-insect               
-orbit                
-cancer               
-structure            
-billion              
-perfume              
-pray                 
-manifest             
-irritate             
-atmosphere           
-manuscript           
-drift                
-secure               
-glory                
-chemical             
-coward               
-surgeon              
-vow                  
-intention            
-calling              
-monologue            
-conserve             
-display              
-earnest              
-authority            
-concise              
-immense              
-reputation           
-punish               
-conduct              
-convey               
-final                
-layer                
-pronounce            
-stiff                
-scheme               
-triumph              
-marble               
-particularly         
-flood                
-ambition             
-misfortune           
-responsibility       
-bound                
-luxury               
-priest               
-sincere              
-novel                
+dismiss              해고하다. 해산시키다.
+agitate              선동하다. 부추기다.
+remedy               치료법. 치료약.
+sway                 흔들리다. 동요하다.
+trail                흔적. 발자국. 추적하다.
+litter               어지르다. 흩뜨리다.
+riot                 폭동. 소동. 폭동을 일으키다.
+tact                 약삭빠름. 기지. 요령.
+solitary             고독한. 쓸쓸한.
+response             반응. 응답.
+dialogue             대화. 토론.
+resign               시작하다.
+insert               삽입하다. 끼우다. 삽입물.
+aspire               열망하다.
+solution             해결. 용해.
+precious             귀중한.
+immediate            직접의. 즉시의.
+excursion            소풍. 짧은 여행.
+steer                조종하다. ..의 키를 잡다.
+fluent               유창한.
+pursue               추적하다. 추구하다.
+ascertain            확인하다. 조사하다.
+competent            유능한.
+stubborn             완고한. 고집센.
+vanish               사라지다. 소실되다.
+speculate            사색하다. 숙고하다.
+mourning             슬픔. 한탄. 애도.
+ascent               상승.
+malice               악의.
+imply                의미하다. 함축하다.
+restrict             제한하다.
+trap                 올가미. 덫. ..을 덫으로 잡다.
+resemblance          유사. 닮음.
+portrait             초상(화)
+adequate             충분한. 적당한.
+praiseworthy         칭찬할 만한.
+motive               동기.
+temptation           유혹. 마음을 끄는 것.
+evaluate             평가하다.
+attract              매혹하다. 끌어들이다.
+brute                짐승. 잔인한 사람.
+attractive           매력적인.
+chart                도표. 차트.
+prophet              예언자.
+reward               보상. 보수. 보상하다.
+column               기동. 칼럼.
+movement             운동.
+swell                부풀다. 팽창하다. 팽창.
+praise               칭찬. 칭찬하다.
+confine              제한하다. 감금하다. 경계선. 한계.
+target               목표. 표적.
+cowardly             겁 많은. 비겁한.
+route                길.
+pioneer              개철자. 선구자.
+faculty              능력.
+brave                용감한.
+species              (생물의) 종.
+seize                잡다.
+flavor               향미. 향기를 곁들이다.
+craft                기술.
+porter               운반인. 짐꾼.
+competence           능력. 적성.
+vary                 변화하다.
+bold                 대담한.
+anticipate           기대하다. 예상하다.
+celebrate            축하하다. 기념하다.
+courtesy             예의바름. 호의.
+hare                 산토끼.
+lavatory             화장실.
+sail                 돛. 항해하다.
+severe               엄격한.
+concept              개념.
+thorough             철저한. 완전한.
+intimate             친밀한.
+strive               노력하다.
+royal                왕의. 당당한.
+similarity           유사.
+anecdote             일화.
+vague                막연한. 애매한.
+category             부문. 종류. 범주.
+funeral              장례(식)
+enthusiastic         열광적인. 열심인.
+barrier              장애(물). 장벽.
+indicate             가리키다. 징후를 보이다.
+polish               연마하다. 닦다.
+upset                뒤집어 엎다. 당황케 하다. 전복. 혼란.
+mankind              인류. 남성.
+suite                한벌. 스위트 룸.
+sigh                 한숨. 탄식. 한숨을 쉬다. 탄식하다.
+existence            존재. 생활.
+phenomenon           현상.
+descend              내리다. 하강하다.
+principal            주요한. 교장.
+recognize            인정하다.
+tiny                 작은. 조그만.
+reference            문의. 참조.
+flame                화염. 불길. 타오르다. 불꽃을 내다.
+reap                 배다. 수확하다. 받다.
+dust                 먼지.
+project              계획. 계획하다. 투영하다.
+destroy              파괴하다.
+wholly               전혀. 완전히.
+conflict             투쟁. 충돌. 충돌하다. 모순되다.
+aspect               국면. 양상. 모습.
+worship              숭배. 예배. 숭배하다.
+decade               10년간.
+awe                  두려움. 외경심.
+suspect              의심하다. 용의자.
+stuff                재료. 물질. 채우다.
+annoy                괴롭히다. 성가시게 굴다.
+urgent               긴급한.
+splendid             화려한. 훌륭한.
+greed                탐욕. 욕심.
+mere                 단순한. 전적인.
+invalid              병약. 병약한. 근거없는. 무가치한. 무효한.
+slavery              노예제도. 노예의 신분.
+associate            교제하다. 관련시키다.
+unique               유일한. 독특한.
+slender              호리호리한. 가느다란.
+rigid                단단한. 엄한.
+spoil                망치다. 못쓰게 만들다.
+section              구분. 구분하다.
+primary              첫째의. 주요한.
+trace                자취. 자국. 추적하다. 거슬러 올라가다.
+arithmetic           산수. 계산. 산수의.
+remain               남다. 잔존하다.
+twilight             땅거미. 어스름.
+numerous             다수의.
+mingle               섞다. 혼합하다.
+winner               승자.
+ornament             장식. 장식품. 장식하다.
+material             물질의. 육체적인.
+obscure              모호한.
+institution          설립.
+reasonable           이상적인.
+peril                위험.
+perfect              완전한.
+oblige               ..에게 의무를 지우다.
+link                 고리. 연결.
+moderate             적당한.
+convenience          편의. 편리.
+visible              눈에 보이는. 명백한.
+orthodox             정통의. 정통파의.
+terminal             종점의. 종점.
+threat               위협.
+assert               (권리를) 주장하다.
+dawn                 여명.
+visual               시각의. 눈에 보이는.
+elect                선추하다.
+tremendous           무서운. 거대한.
+neglect              무시하다. 무시. 태만. 게을리하다.
+imperial             제국의. 황제의.
+limit                제한하다. 한도.
+troublesome          골치 아픈. 귀찮은.
+lonely               고독한.
+suspicion            혐의. 의심.
+caution              주의. 경계.
+mourn                슬퍼하다. 한탄하다.
+frame                뼈대. 골조.
+forward              전방의. 앞으로. 전방으로.
+alien                와국의. 이질의. 외국인. 우주인.
+pious                경건한. 신앙심이 깊은.
+dye                  염색하다. 염색.
+hasten               서두르다. 재촉하다.
+grave                무덤. 근엄한. 심각한.
+pier                 부두. 선창.
+heritage             유산.
+folly                어리석음. 어리석은 행동.
+concrete             구체적인. 콘크리트. 구체물.
+hazard               위험.
+status               지위. 상태.
+abnormal             비정상적인.
+relief               경감. 안심. 구원.
+ridiculous           옷기는. 어리석은.
+invitation           초대.
+function             기능. 역할.
+erect                세우다. 곧은. 똑바로 선.
+argument             논의.
+superstition         미신.
+notice               주의. 통치. 알아채다. 인지한다.
+situation            위치. 정세.
+attempt              시도하다. 시도. 기도.
+hatred               증오. 원한.
+marvel               경이. 감탄하다. 놀라다.
+passion              열정.
+generation           세대. 자손.
+circuit              순회. 우회. 회로.
+insect               곤충.
+orbit                (천체의) 궤도.
+cancer               암.
+structure            구조.
+billion              십억.
+perfume              향수. 향수를 뿌리다. 풍기다.
+pray                 기도하다.
+manifest             명백한. 명백히 하다.
+irritate             짜증나게 하다.
+atmosphere           대기. 분위기.
+manuscript           원고. 사본.
+drift                표류. 표류하다. 떠내려가다.
+secure               안전한. 안전하게 하다. 확보하다.
+glory                영광.
+chemical             화학의. 화학약품.
+coward               겁쟁이.
+surgeon              외과의사.
+vow                  서약. 맹세. 서약하다.
+intention            의향. 의지.
+calling              부름. 소집. 소명. 천직.
+monologue            독백.
+conserve             보존하다. 보호하다.
+display              전시. 전시하다.
+earnest              진지한. 열심인.
+authority            권위(자)
+concise              간결한.
+immense              막대한. 거대한.
+reputation           명성. 평판.
+punish               벌하다.
+conduct              인도하다. 지휘하다. 지도. 지휘.
+convey               전하다. 나르다.
+final                마지막의. 최후의.
+layer                층.
+pronounce            발음하다.
+stiff                견고한. 딱딱한.
+scheme               계획.
+triumph              승리. 대성공.
+marble               대리석.
+particularly         특히.
+flood                홍수. 범람하다. 쇄도하다.
+ambition             대망. 야심.
+misfortune           불운.
+responsibility       책임.
+bound                한계. 경계.
+luxury               사치(품)
+priest               성직자.
+sincere              성실한. 진심의.
+novel                소설. 신기한.
 staple               
 petty                
 cradle               
