@@ -1,7 +1,9 @@
 package org.tain.working.word;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -70,6 +72,15 @@ public class WordWorking {
 			} finally {
 				if (br != null) try { br.close(); } catch (Exception e) {}
 			}
+		}
+	}
+	
+	public void saveJsonFile() {
+		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			List<Word> lstWord = this.wordRepository.findAll();
+			JsonPrint.getInstance().savePrettyJson(new File(this.fileToWord), lstWord);
 		}
 	}
 }
