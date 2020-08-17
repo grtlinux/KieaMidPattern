@@ -65,7 +65,7 @@ public class WordWorking {
 							.word(strWord)
 							.mean(strMean)
 							.build());
-					if (Flag.flag) System.out.println(">>>>> " + JsonPrint.getInstance().toPrettyJson(word));
+					if (Flag.flag) JsonPrint.getInstance().printPrettyJson(word);
 					
 					id ++;
 				}

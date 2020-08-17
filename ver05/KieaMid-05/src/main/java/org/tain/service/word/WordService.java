@@ -26,8 +26,8 @@ public class WordService {
 			int pageSize = pageable.getPageSize();
 			Sort sort = pageable.getSort();
 			
-			pageSize = 10;
-			sort = Sort.by("id").descending();
+			pageSize = 15;
+			sort = Sort.by("id").ascending();
 			
 			pageable = PageRequest.of(pageNumber, pageSize, sort);
 		}
