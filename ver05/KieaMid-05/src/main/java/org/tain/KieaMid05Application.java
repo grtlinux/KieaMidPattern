@@ -110,6 +110,8 @@ public class KieaMid05Application implements CommandLineRunner {
 		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.wordWorking.loading();
+		if (!Flag.flag) this.wordWorking.saveJsonFile();
+		if (!Flag.flag) this.wordWorking.loadingFromJsonFile();
 	}
 
 	///////////////////////////////////////////////////////////////////////////

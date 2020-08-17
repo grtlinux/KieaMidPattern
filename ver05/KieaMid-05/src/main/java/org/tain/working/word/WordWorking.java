@@ -14,6 +14,8 @@ import org.tain.utils.CurrentInfo;
 import org.tain.utils.Flag;
 import org.tain.utils.JsonPrint;
 
+import com.fasterxml.jackson.core.type.TypeReference;
+
 import lombok.extern.slf4j.Slf4j;
 
 @Component
@@ -76,11 +78,32 @@ public class WordWorking {
 	}
 	
 	public void saveJsonFile() {
-		log.info("KANG-20200806 >>>>> {} {}", CurrentInfo.get());
+		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) {
+			new File(this.fileToWord).delete();
+			
 			List<Word> lstWord = this.wordRepository.findAll();
 			JsonPrint.getInstance().savePrettyJson(new File(this.fileToWord), lstWord);
+		}
+	}
+	
+	public void loadingFromJsonFile() {
+		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) {
+			try {
+				List<Word> lstWord = JsonPrint.getInstance().getObjectMapper().readValue(new File(this.fileToWord), new TypeReference<List<Word>>() {});
+				
+				this.wordRepository.deleteAll();
+				
+				if (!Flag.flag) lstWord.forEach(word -> {
+					this.wordRepository.save(word);                     // personal save
+				});
+				if (Flag.flag) this.wordRepository.saveAll(lstWord);    // array save
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
 		}
 	}
 }
