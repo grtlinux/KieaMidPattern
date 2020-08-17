@@ -6,11 +6,14 @@ import com.fasterxml.jackson.databind.DeserializationFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class JsonPrint implements JsonPrintImpl {
 
 	private static JsonPrint instance = null;
 	
-	public static JsonPrint getInstance() {
+	public static synchronized JsonPrint getInstance() {
 		if (instance == null) {
 			instance = new JsonPrint();
 		}
@@ -59,12 +62,14 @@ public class JsonPrint implements JsonPrintImpl {
 
 	@Override
 	public void printJson(Object object) {
-		System.out.println("JSON >>>>> " + this.toJson(object));
+		//System.out.println("JSON >>>>> " + this.toJson(object));
+		log.info("JSON >>>>> {}", this.toJson(object));
 	}
 
 	@Override
 	public void printPrettyJson(Object object) {
-		System.out.println("Pretty JSON >>>>> " + this.toPrettyJson(object));
+		//System.out.println("Pretty JSON >>>>> " + this.toPrettyJson(object));
+		log.info("Pretty JSON >>>>> {}", this.toPrettyJson(object));
 	}
 
 	@Override
