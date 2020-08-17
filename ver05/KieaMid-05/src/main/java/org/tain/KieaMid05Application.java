@@ -1,6 +1,9 @@
 package org.tain;
 
 import java.time.LocalDateTime;
+import java.util.Arrays;
+import java.util.Calendar;
+import java.util.List;
 import java.util.TimeZone;
 
 import javax.annotation.PostConstruct;
@@ -36,6 +39,25 @@ public class KieaMid05Application implements CommandLineRunner {
 			TimeZone.setDefault(TimeZone.getTimeZone("UTC+9"));
 			//TimeZone.setDefault(TimeZone.getTimeZone("Asia/Seoul"));
 			//TimeZone.setDefault(TimeZone.getTimeZone("GMT+09:00"));
+		}
+		
+		if (Flag.flag) {
+			List<String> lstTimeZone = Arrays.asList(TimeZone.getAvailableIDs());
+			lstTimeZone.forEach(timeZoneId -> {
+				System.out.println(">>>>> " + timeZoneId);
+			});
+		}
+		
+		if (Flag.flag) {
+			Calendar cal1 = Calendar.getInstance();
+			cal1.setTimeZone(TimeZone.getTimeZone("Asia/Seoul"));
+			System.out.println("Calendar.getTimeZone().getID() >>>>> " + cal1.getTimeZone().getID());
+		}
+		
+		if (Flag.flag) {
+			TimeZone timeZone = Calendar.getInstance().getTimeZone();
+			System.out.println("현재 TimeZone 구역 의 이름 ::: " + timeZone.getDisplayName());
+			System.out.println("현재 TimeZone 구역 의 해당 ID ::: "  + timeZone.getID());
 		}
 	}
 	
