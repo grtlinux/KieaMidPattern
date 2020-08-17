@@ -31,7 +31,8 @@ public class KieaMid05Application implements CommandLineRunner {
 
 	@PostConstruct
 	public void start() {
-		if (Flag.flag) {
+		// TO application.yml: spring.jpa.properties.hibernate.jdbc.time_zone: UTC+9
+		if (!Flag.flag) {
 			TimeZone.setDefault(TimeZone.getTimeZone("UTC+9"));
 			//TimeZone.setDefault(TimeZone.getTimeZone("Asia/Seoul"));
 			//TimeZone.setDefault(TimeZone.getTimeZone("GMT+09:00"));

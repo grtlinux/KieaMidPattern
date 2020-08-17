@@ -7,7 +7,7 @@ server:
 spring:
   profiles.active:
   - proj-default
-  #- proj-local
+  - proj-local
   #- proj-test
   #- proj-read
 
@@ -28,6 +28,11 @@ spring:
     database: h2
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate.ddl-auto: create
+    properties:
+      hibernate.jdbc.time_zone: UTC+9
+      #hibernate.jdbc.time_zone: KST   # error
+      #hibernate.jdbc.time_zone: Asia/Seoul    # ??
+      #hibernate.jdbc.time_zone: GMT+09:00      # ??
   data.rest:
     base-path: /api
     default-page-size: 5
