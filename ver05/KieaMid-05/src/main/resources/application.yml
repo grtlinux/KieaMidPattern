@@ -19,7 +19,8 @@ spring:
       web-allow-others: true
   datasource:
     hikari:
-      jdbc-url: jdbc:h2:tcp://localhost:9092/kangdb
+      #jdbc-url: jdbc:h2:tcp://localhost:9092/kangdb
+      jdbc-url: jdbc:h2:mem:testdb
       driver-class-name: org.h2.Driver
       username: sa
       password:
