@@ -15,6 +15,7 @@ import org.tain.utils.JsonPrint;
 import org.tain.utils.LnsTimeZone;
 import org.tain.utils.Sample;
 import org.tain.working.board.BoardWorking;
+import org.tain.working.mid.MidWorking;
 import org.tain.working.word.WordWorking;
 
 import lombok.extern.slf4j.Slf4j;
@@ -44,7 +45,7 @@ public class KieaMid05Application implements CommandLineRunner {
 		if (Flag.flag) job01();  // Test
 		if (Flag.flag) job02();  // Board
 		if (Flag.flag) job03();  // Word
-		if (Flag.flag) job04();
+		if (Flag.flag) job04();  // Mid
 		if (Flag.flag) job05();
 		if (Flag.flag) job06();
 		if (Flag.flag) job07();
@@ -86,7 +87,7 @@ public class KieaMid05Application implements CommandLineRunner {
 		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
 		
 		if (Flag.flag) this.wordWorking.loading();
-		if (!Flag.flag) this.wordWorking.saveJsonFile();
+		if (Flag.flag) this.wordWorking.saveJsonFile();
 		if (!Flag.flag) this.wordWorking.loadingFromJsonFile();
 	}
 
@@ -94,10 +95,22 @@ public class KieaMid05Application implements CommandLineRunner {
 	///////////////////////////////////////////////////////////////////////////
 	///////////////////////////////////////////////////////////////////////////
 	
+	@Autowired
+	private MidWorking midWorking;
+	
 	private void job04() {
 		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
+		
+		if (Flag.flag) this.midWorking.loading();
+		if (!Flag.flag) this.midWorking.getAll();
+		if (Flag.flag) this.midWorking.saveJsonFile();
+		if (Flag.flag) this.midWorking.getById();
 	}
 
+	///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
+	///////////////////////////////////////////////////////////////////////////
+	
 	private void job05() {
 		log.info("KANG-20200808 >>>>> {} {}", CurrentInfo.get());
 	}

@@ -5,7 +5,7 @@ figure               모습, 인물, 숫자, 계산하다
 forgive              용서하다
 blame                나무라다, 비난하다
 subject              주제, 학과, 지배를 받는
-effect               결과, 효과
+effect               효과, 결과
 introduce            소개하다
 afford               ..할 여유가 있다
 inform               ..에게 알리다, 통지하다

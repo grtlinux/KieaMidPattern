@@ -65,4 +65,36 @@
 
 
 
+<!-- page3 -->
+<th:block th:fragment="page3">
+	<!-- page3 -->
+	<nav aria-label="Page navigation" style="text-align:center;">
+		<ul class="pagination" th:with="startNumber=${T(Math).floor(midList.number/10)}*10+1, endNumber=(${midList.totalPages} > ${startNumber}+9) ? ${startNumber}+9 : ${midList.totalPages}">
+			<li><a aria-label="Previous" th:href="@{/mid/list(page=1)}">&laquo;</a></li>
+			<li th:style="${midList.first} ? 'display:none'">
+				<a th:href="@{/mid/list(page=${midList.number})}">&lsaquo;</a>
+			</li>
+
+			<li th:each="page :${#numbers.sequence(startNumber, endNumber)}" th:class="(${page} == ${midList.number}+1) ? 'active'">
+				<a th:href="@{/mid/list(page=${page})}" th:text="${page}"><span class="sr-only"></span></a>
+			</li>
+
+			<li th:style="${midList.last} ? 'display:none'">
+				<a th:href="@{/mid/list(page=${midList.number}+2)}">&rsaquo;</a>
+			</li>
+			<li><a aria-label="Next" th:href="@{/mid/list(page=${midList.totalPages})}">&raquo;</a></li>
+		</ul>
+	</nav>
+	<div style="text-align:center;">
+		(<!-- th:block th:text="${midList.content}"/ --> <th:block th:text="${midList.totalElements}"/> : <th:block th:text="${midList.numberOfElements}"/> : <th:block th:text="${midList.number}+1"/> / <th:block th:text="${midList.totalPages}"/>)
+	</div>
+	<!-- /page3 -->
+</th:block>
+<!-- /page3 -->
+
+
+
+
+
+
 </html>
