@@ -57,7 +57,7 @@ public class WordWorking {
 						continue;
 						//break;
 					
-					String strWord = line.substring(0, pos);
+					String strWord = line.substring(0, pos).trim();
 					String strMean = line.substring(pos).trim();
 					
 					word = this.wordRepository.save(Word.builder()
